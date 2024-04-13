@@ -5,3 +5,6 @@
 - load() = Sistema de Carga de partida
     - loading_slot_choice INT = Número de slot guardado a cargar
 
+
+<h1> Texto </h1>
+- text_1 = Array con líneas en Español
