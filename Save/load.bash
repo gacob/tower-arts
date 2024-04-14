@@ -7,6 +7,7 @@ source ../Data/locale/spanish.bash
 load () {
     # shellcheck disable=SC2154
     echo "${text_1[0]}" # "¿Qué ranura quieres cargar?"
+    echo "${text_1[6]}" # "Introduce un número"
     sleep 1
     read -r loading_slot_choice
 

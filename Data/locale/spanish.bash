@@ -7,4 +7,6 @@ text_1=(
     "Esta ranura no existe."
     "¿En qué ranura quieres guardar?"
     "Cargando..."
+    "Este archivo ya existe. ¿Deseas sobreescribir?"
+    "Introduce un número"
 )
