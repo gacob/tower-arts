@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ### LOAD SYSTEM ###
+
 # shellcheck disable=SC1091
 source ../Data/locale/spanish.bash
 

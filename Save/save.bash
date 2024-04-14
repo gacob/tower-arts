@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # shellcheck disable=SC1091
-source ../locale/spanish.bash
+source ../Data/locale/spanish.bash
+
 ### Save System ###
 
 save() {
