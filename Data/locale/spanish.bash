@@ -5,4 +5,6 @@
 text_1=(
     "¿Qué ranura quieres cargar?"
     "Esta ranura no existe."
+    "¿En qué ranura quieres guardar?"
+    "Cargando..."
 )
