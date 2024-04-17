@@ -1,14 +1,6 @@
 #!/bin/bash
 
-monstruo() {
-    echo "Has matado al monstruo"
-    read -r exp
-    experience=$(( experience + exp ))
-    echo $experience
-    check
-}
-
-check() {
+check_exp() {
     if [[ $level -eq 0 || $level -eq 1 ]]; then
         exp_needed=10
         level=1
@@ -20,8 +12,4 @@ check() {
         level=$(( level + 1))
         echo "Has subido de nivel" $level
     done
-    monstruo
 }
-
-monstruo
-check

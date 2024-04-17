@@ -2,6 +2,7 @@
 
 # shellcheck disable=SC1091
 source ../Data/locale/spanish.bash
+source ../Data/System/Level/level_up.bash
 
 ### Save System ###
 
@@ -21,8 +22,10 @@ save() {
     else
         (
         # Introduce tus variables en una nueva línea tal que así:
-        echo variable="$variable"
-
+        echo experience="$experience"
+        echo level="$level"
+        echo exp_needed="$exp_needed"
+        echo exp_base="$exp_base"
         ) > "save_1.bash"
     fi
 
