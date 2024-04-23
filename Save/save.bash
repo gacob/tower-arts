@@ -17,7 +17,7 @@ save() {
     # Comprobación de la ranura de guardado
     if [[ -e "save_$ranura_guardado" ]]; then
         ranura_guardado=0
-        echo "${text_1[5]}" "Este archivo ya existe. ¿Deseas sobreescribir?"
+        echo "${text_1[5]}" # Este archivo ya existe. ¿Deseas sobreescribir?
 
     else
         (
