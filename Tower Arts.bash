@@ -18,6 +18,7 @@ start_menu (){
         1)  start_option=0
             continue_game
             ;;
+
         2) start_option=0
             redirect=1
             save
@@ -46,8 +47,7 @@ start_menu (){
                         echo "Selecciona (y|Y) o (n|N)"
                         ;;
                 esac
-            done
-                        
+            done        
             ;;
 
         *)  echo "Debes seleccionar una opción del menú."
@@ -55,5 +55,3 @@ start_menu (){
             start_menu
     esac
 }
-
-start_menu
