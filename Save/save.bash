@@ -9,7 +9,7 @@ save() {
     echo "${text_1[2]}" # ¿En qué ranura quieres guardar?
     echo "${text_1[6]}" # "Introduce un número"
     sleep 1
-    read -r ranura_guardado
+    read -r -s ranura_guardado
 
     # Comprobación de la ranura de guardado
     if [[ -e "save_$ranura_guardado" ]]; then
@@ -19,12 +19,12 @@ save() {
     else
         (
         # Introduce tus variables en una nueva línea tal que así:
-        echo experience="$experience"
-        echo level="$level"
-        echo exp_needed="$exp_needed"
-        echo exp_base="$exp_base"
-        echo hardcore="$hardcore"
-        echo first_time="$first_time"
+        echo experience=$experience
+        echo level=$level
+        echo exp_needed=$exp_needed
+        echo exp_base=$exp_base
+        echo hardcore=$hardcore
+        echo first_time=$first_time
         ) > "save_1.bash"
     fi
 
