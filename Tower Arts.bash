@@ -1,15 +1,15 @@
 #!/bin/bash
 #
 
-source Save/save.bash
-source Save/load.bash
-source Data/System/level_up.bash
-source Data/System/tower.bash
-source Data/mobs/mobs_template_1.bash
-source Data/Basic/lobby.bash
-source Data/locale/spanish.bash
-source Data/Basic/matchmaking.bash
-source Data/System/death.bash
+source data/system/save.bash
+source data/system/load.bash
+source data/system/level_up.bash
+source data/system/tower.bash
+source data/mobs/mobs_template_1.bash
+source data/basic/lobby.bash
+source data/locale/spanish.bash
+source data/basic/matchmaking.bash
+source data/system/death.bash
 
 
 start_menu (){

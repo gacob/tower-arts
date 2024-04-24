@@ -9,7 +9,7 @@ save() {
     echo "${text_1[2]}" # ¿En qué ranura quieres guardar?
     echo "${text_1[6]}" # "Introduce un número"
     sleep 1
-    read -r -s ranura_guardado
+    read -r ranura_guardado
 
     # Comprobación de la ranura de guardado
     if [[ -e "save_$ranura_guardado" ]]; then
@@ -25,7 +25,7 @@ save() {
         echo exp_base=$exp_base
         echo hardcore=$hardcore
         echo first_time=$first_time
-        ) > "save_1.bash"
+        ) > "/Save/save_1.bash"
     fi
 
 }
