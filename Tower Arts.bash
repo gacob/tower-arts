@@ -3,7 +3,7 @@
 
 source Save/save.bash
 source Save/load.bash
-source Data/System/Level/level_up.bash
+source Data/System/level_up.bash
 source Data/mobs/mobs_template_1.bash
 
 start_menu (){
