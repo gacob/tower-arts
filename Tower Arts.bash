@@ -7,7 +7,7 @@ source Data/System/level_up.bash
 source Data/System/tower.bash
 source Data/mobs/mobs_template_1.bash
 source Data/Basic/lobby.bash
-source ../Data/locale/spanish.bash
+source Data/locale/spanish.bash
 
 
 start_menu (){
@@ -26,6 +26,7 @@ start_menu (){
         2) start_option=0
             redirect=1
             save
+            lobby
             ;;
 
         3)  start_option=0
