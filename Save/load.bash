@@ -2,8 +2,6 @@
 
 ### LOAD SYSTEM ###
 
-# shellcheck disable=SC1091
-source ../Data/locale/spanish.bash
 
 load () {
     # shellcheck disable=SC2154

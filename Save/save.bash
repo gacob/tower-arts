@@ -1,10 +1,6 @@
 #!/bin/bash
 
 
-# shellcheck disable=SC1091
-source ../Data/locale/spanish.bash
-source ../Data/System/Level/level_up.bash
-
 ### Save System ###
 
 save() {
