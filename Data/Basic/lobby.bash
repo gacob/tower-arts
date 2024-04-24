@@ -26,6 +26,8 @@ lobby (){
         5)  while [[ $yn != [yY] || $yn != [nN] ]]; do
             echo
             read -r -p "¿Estás seguro que quieres volver al menú de inicio? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)" -s -n 1 yn
+            echo
+            echo
                 case $yn in
                 [yY])   start_menu
                         ;;

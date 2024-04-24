@@ -8,6 +8,8 @@ source Data/System/tower.bash
 source Data/mobs/mobs_template_1.bash
 source Data/Basic/lobby.bash
 source Data/locale/spanish.bash
+source Data/Basic/matchmaking.bash
+source Data/System/death.bash
 
 
 start_menu (){
@@ -15,6 +17,7 @@ start_menu (){
     echo "2. Nueva partida"
     echo "3. Cargar partida"
     echo "4. Salir"
+    echo
 
     read -r -s -n 1 start_option
 
