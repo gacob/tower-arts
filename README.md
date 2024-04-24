@@ -12,13 +12,22 @@
     - exp_base = Experiencia con la que el jugador empieza un nivel. Usado para cálculo de exp_needed del nivel al que se ha subido.
 
 - welcome() = Mensaje de Bienvenida para la torre
+    - floor = Te pone el piso inicial (1)
 
 - floor_random() = Elige el floor aleatoriamente excepto que sea boss. Llama a boss_fight(), mob_battle(), tienda(), santuario()
     - floor_chances = Integer array 0-100
     - floor_randomized = Número aleatorio del array
 
-- floor_counter () - Contador de Floor
+- floor_counter () = Contador de Floor
     - floor = Piso/Planta de la Torre
+
+- join_tower() = Proceso que maneja los bucles para el sistema de la torre y el lobby
+
+- death() = Fin de la torre.
+    - first_time = Se vuelve 0. Comprueba si es tu primerita vez no más
+
+- dead() = Check para saber si has muerto
+    - dead = Se vuelve 1 si has muerto.
 
 <h1> Texto </h1>
 - text_1 = Array con líneas en Español
