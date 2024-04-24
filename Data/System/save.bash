@@ -1,10 +1,10 @@
 #!/bin/bash
 
+#source "Tower Arts.bash"
 
 ### Save System ###
 
 save() {
-    
     # shellcheck disable=SC2154
     echo "${text_1[2]}" # ¿En qué ranura quieres guardar?
     echo "${text_1[6]}" # "Introduce un número"
@@ -25,7 +25,6 @@ save() {
         echo exp_base=$exp_base
         echo hardcore=$hardcore
         echo first_time=$first_time
-        ) > "/Save/save_1.bash"
+        ) > "Save/save_1.bash"
     fi
-
 }

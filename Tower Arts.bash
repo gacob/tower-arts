@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 
 source data/system/save.bash
 source data/system/load.bash
@@ -28,13 +28,13 @@ start_menu (){
 
         2) start_option=0
             redirect=1
+            first_time=1
             save
             lobby
             ;;
 
         3)  start_option=0
             redirect=2
-            first_time=1
             load
             ;;
 
