@@ -26,6 +26,8 @@ save() {
         echo level="$level"
         echo exp_needed="$exp_needed"
         echo exp_base="$exp_base"
+        echo hardcore="$hardcore"
+        echo first_time="$first_time"
         ) > "save_1.bash"
     fi
 

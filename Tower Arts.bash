@@ -4,6 +4,7 @@
 source Save/save.bash
 source Save/load.bash
 source Data/System/level_up.bash
+source Data/System/tower.bash
 source Data/mobs/mobs_template_1.bash
 
 start_menu (){
@@ -26,6 +27,7 @@ start_menu (){
 
         3)  start_option=0
             redirect=2
+            first_time=1
             load
             ;;
 
@@ -55,3 +57,5 @@ start_menu (){
             start_menu
     esac
 }
+
+start_menu
