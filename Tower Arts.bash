@@ -38,7 +38,8 @@ start_menu (){
             load
             ;;
 
-        4)  while [[ $yn != [yY] || $yn != [nN] ]]; do
+        4)  start_option=0
+            while [[ $yn != [yY] || $yn != [nN] ]]; do
             echo
             read -r -p "¿Estás seguro que quieres salir? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)" -s -n 1 yn
                 case $yn in
@@ -59,7 +60,8 @@ start_menu (){
             done        
             ;;
 
-        *)  echo "Debes seleccionar una opción del menú."
+        *)  start_option=0
+            echo "Debes seleccionar una opción del menú."
             clear
             start_menu
     esac
