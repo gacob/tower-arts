@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ../../"Tower Arts.bash"
-
 lobby (){
     echo "1. Entrar en la torre"
     echo "2. Cambiar personaje"
@@ -52,5 +50,3 @@ lobby (){
             ;;
     esac
 }
-
-lobby
