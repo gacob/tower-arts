@@ -10,6 +10,7 @@ source data/basic/lobby.bash
 source data/locale/spanish.bash
 source data/basic/matchmaking.bash
 source data/system/death.bash
+source data/basic/character.bash
 
 
 start_menu (){
