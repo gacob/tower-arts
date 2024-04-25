@@ -1,7 +1,9 @@
 #!/bin/bash
 
+### Personaje 1 (Por Defecto): El Narcisista
 character_template_1 () {
     character_name_1="El Narcisista"
+    character_description_1="El infierno sólo está caliente porque está él"
     hp=100
     atk_p=10
     atk_m=1

@@ -15,6 +15,7 @@ lobby (){
             ;;
         
         2)  info_character
+            change_character
             ;;
 
         3)  book
