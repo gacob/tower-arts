@@ -1,5 +1,6 @@
 
 <h1> Lista de Funciones y Variables </h1>
+
 - start_menu() = Menú de inicio del juego e inicializador del juego.
     - start_option = Selección por número de los elementos del menú de inicio. Se vuelve cero después de entrar en un case.
     - redirect = *Uso aún por definir*
