@@ -14,7 +14,7 @@ lobby (){
         1)  join_tower
             ;;
         
-        2)  character
+        2)  info_character
             ;;
 
         3)  book

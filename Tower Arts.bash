@@ -31,6 +31,7 @@ start_menu (){
             redirect=1
             first_time=1
             save
+            default_character
             lobby
             ;;
 
