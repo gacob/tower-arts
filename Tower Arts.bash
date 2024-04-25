@@ -11,6 +11,7 @@ source data/locale/spanish.bash
 source data/basic/matchmaking.bash
 source data/system/death.bash
 source data/basic/character.bash
+source data/character/character_1.bash
 
 
 start_menu (){

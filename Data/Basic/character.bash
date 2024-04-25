@@ -2,6 +2,20 @@
 
 info_character() {
     echo Estás usando a $character_name
+    echo "______________________________"
+    echo
+    echo $character_description
+    echo
+    echo "_________________________________"
+    echo 
+    echo Vida: $hp
+    echo Ataque Físico: $atk_p
+    echo Ataque Mágico: $atk_m
+    echo Defensa Física: $def_p
+    echo Defensa Mágica: $def_m
+    echo Velocidad: $speed
+    echo Probabilidades de Golpe Crítico: $crit_r
+    echo Daño Crítico: $crit_h
 }
 
 
