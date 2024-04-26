@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Personaje 2: El Perfeccionista
-character_template_1 () {
+character_template_2 () {
     character_name_2="El Perfeccionista"
     character_description_2="¿Nunca te has fijado en que todos los demonios tienen sus cuernos colocados de forma simétrica? ¿Quién crees que los diseñó?"
     hp_2=100
