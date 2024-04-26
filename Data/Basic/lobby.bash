@@ -1,6 +1,7 @@
 #!/bin/bash
 
 lobby (){
+    info_character
     echo "1. Entrar en la torre"
     echo "2. Cambiar personaje"
     echo "3. Libro"
@@ -14,8 +15,7 @@ lobby (){
         1)  join_tower
             ;;
         
-        2)  info_character
-            change_character
+        2)  change_character
             ;;
 
         3)  book

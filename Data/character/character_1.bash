@@ -2,7 +2,6 @@
 
 ### Personaje 1 (Por Defecto): El Narcisista
 character_template_1() {
-    echo Esto es la template por defecto
     character_name_1="El Narcisista"
     character_description_1="El infierno sólo está caliente porque está él"
     hp_1=100

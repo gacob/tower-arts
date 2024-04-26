@@ -22,7 +22,6 @@ info_character() {
 
 
 default_character() {
-    echo Función de default character
     character_template_1
     current_character=1
     character_name=$character_name_1
@@ -35,12 +34,12 @@ default_character() {
     speed=$speed_1
     crit_r=$crit_r_1
     crit_h=$crit_h_1
-    echo Función final de default character
 }
 
 
 change_character() {
     list_character=0
+    character_template_2
     while [[ $list_character -eq 0 ]]; do
         echo ¿Quieres cambiar de personaje?
         echo 1. Cambiar de personaje.
@@ -79,30 +78,30 @@ change_character() {
             current_character=1
             character_name=$character_name_1
             character_description=$character_description_1
-            hp=$hp
-            atk_p=$atk_p
-            atk_m=$atk_m
-            def_p=$def_p
-            def_m=$def_m
-            speed=$speed
-            crit_r=$crit_r
-            crit_h=$crit_h
+            hp=$hp_1
+            atk_p=$atk_p_1
+            atk_m=$atk_m_1
+            def_p=$def_p_1
+            def_m=$def_m_1
+            speed=$speed_1
+            crit_r=$crit_r_1
+            crit_h=$crit_h_1
             lobby
             ;;
         2)
             choose_character=0
-            character_template_1
+            character_template_2
             current_character=2
             character_name=$character_name_2
             character_description=$character_description_2
-            hp=$hp
-            atk_p=$atk_p
-            atk_m=$atk_m
-            def_p=$def_p
-            def_m=$def_m
-            speed=$speed
-            crit_r=$crit_r
-            crit_h=$crit_h
+            hp=$hp_2
+            atk_p=$atk_p_2
+            atk_m=$atk_m_2
+            def_p=$def_p_2
+            def_m=$def_m_2
+            speed=$speed_2
+            crit_r=$crit_r_2
+            crit_h=$crit_h_2
             lobby
     esac
 }
