@@ -1,13 +1,13 @@
 #!/bin/bash
 
+
 info_character() {
+    echo "_____________________________"
+    echo
     echo Estás usando a "$character_name"
+    echo
     echo "______________________________"
     echo
-    echo "$character_description"
-    echo
-    echo "_________________________________"
-    echo 
     echo Vida: "$hp"
     echo Ataque Físico: "$atk_p"
     echo Ataque Mágico: "$atk_m"
@@ -22,6 +22,7 @@ info_character() {
 
 
 default_character() {
+    echo Función de default character
     character_template_1
     current_character=1
     character_name=$character_name_1
@@ -34,6 +35,7 @@ default_character() {
     speed=$speed_1
     crit_r=$crit_r_1
     crit_h=$crit_h_1
+    echo Función final de default character
 }
 
 
