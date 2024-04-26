@@ -2,8 +2,8 @@
 
 ### Personaje 2: El Perfeccionista
 character_template_1 () {
-    character_name_1="El Perfeccionista"
-    character_description_1="¿Nunca te has fijado en que todos los demonios tienen sus cuernos colocados de forma simétrica? ¿Quién crees que los diseñó?"
+    character_name_2="El Perfeccionista"
+    character_description_2="¿Nunca te has fijado en que todos los demonios tienen sus cuernos colocados de forma simétrica? ¿Quién crees que los diseñó?"
     hp=100
     atk_p=1
     atk_m=10
