@@ -12,6 +12,7 @@ source data/basic/matchmaking.bash
 source data/system/death.bash
 source data/basic/character.bash
 source data/character/character_1.bash
+source data/character/character_2.bash
 
 
 start_menu (){
