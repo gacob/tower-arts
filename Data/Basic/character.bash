@@ -57,5 +57,50 @@ change_character() {
         esac
     done
 
+    sleep 1
+    echo 1. Nombre: "$character_name_1"
+    echo Descripción: "$character_description_1"
+    echo Es un personaje especializado en ataque físico.
+    echo 
+    echo 2. Nombre: "$character_name_2"
+    echo Descripción: "$character_description_2"
+    echo Es un personaje especializado en ataque mágico.
+    echo
+    echo ¿Qué personaje vas a utilizar?
+    sleep 1
+    read -r choose_character
     
+    case $choose_character in
+        1)
+            choose_character=0
+            character_template_1
+            current_character=1
+            character_name=$character_name_1
+            character_description=$character_description_1
+            hp=$hp
+            atk_p=$atk_p
+            atk_m=$atk_m
+            def_p=$def_p
+            def_m=$def_m
+            speed=$speed
+            crit_r=$crit_r
+            crit_h=$crit_h
+            lobby
+            ;;
+        2)
+            choose_character=0
+            character_template_1
+            current_character=2
+            character_name=$character_name_2
+            character_description=$character_description_2
+            hp=$hp
+            atk_p=$atk_p
+            atk_m=$atk_m
+            def_p=$def_p
+            def_m=$def_m
+            speed=$speed
+            crit_r=$crit_r
+            crit_h=$crit_h
+            lobby
+    esac
 }
