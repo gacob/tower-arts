@@ -1,18 +1,20 @@
 #!/bin/bash
 
 
+source data/system/death.bash
 source data/system/save.bash
 source data/system/load.bash
 source data/system/level_up.bash
 source data/system/tower.bash
-source data/mobs/mobs_template_1.bash
+source data/system/reward.bash
 source data/basic/lobby.bash
-source data/locale/spanish.bash
+source data/basic/drop.bash
 source data/basic/matchmaking.bash
-source data/system/death.bash
 source data/basic/character.bash
+source data/locale/spanish.bash
 source data/character/character_1.bash
 source data/character/character_2.bash
+source data/mobs/mobs_template_1.bash
 
 
 start_menu (){
