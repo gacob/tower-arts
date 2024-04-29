@@ -106,6 +106,11 @@
     - drop_chances = Array 0-100 usado para randomizar drops
     - drop_randomized = Get a random number from the previous array 0-100
     - value = Valor de un bucle For para comprobar todo el array
+- reward_gold() = Cuánto oro se dropea. Totalmente aleatorio (moneda del vicio)
+    - gold_chances = Array de 0-100
+    - drop_gold_randomized = Número aleatorio del array para sumártelo como oro
+    - gold = Cuánto oro tienes
+
 
 ### Drop ###
 ## data/basic/drop.bash
