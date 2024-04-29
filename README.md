@@ -98,5 +98,19 @@
 - dead() = Check para saber si has muerto
     - dead = Se vuelve 1 si has muerto.
 
+
+### Reward ###
+## data/system/reward.bash
+- reward_exp() = Da experiencia basado en nivel
+- reward_drop() = % de dropear objetos
+    - drop_chances = Array 0-100 usado para randomizar drops
+    - drop_randomized = Get a random number from the previous array 0-100
+    - value = Valor de un bucle For para comprobar todo el array
+
+### Drop ###
+## data/basic/drop.bash
+Es un array con los objetos para dropear y su index
+
+
 <h1> Texto </h1>
 - text_1 = Array con líneas en Español
