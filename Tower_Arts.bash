@@ -11,6 +11,8 @@ source data/basic/lobby.bash
 source data/basic/drop.bash
 source data/basic/matchmaking.bash
 source data/basic/character.bash
+source data/basic/shop.bash
+source data/basic/shrine.bash
 source data/locale/spanish.bash
 source data/character/character_1.bash
 source data/character/character_2.bash

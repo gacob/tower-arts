@@ -117,5 +117,16 @@
 Es un array con los objetos para dropear y su index
 
 
+### Tienda ###
+## data/basic/shop.bash
+- tienda() = El nivel especial Tienda, donde compras o vendes objetos.
+    - shop_option = Array de 0-100
+    - random_shop_option = Coge un número aleatorio del array shop_option
+    
+
+### Santuario ###
+## data/basic/shrine.bash
+
+
 <h1> Texto </h1>
 - text_1 = Array con líneas en Español
