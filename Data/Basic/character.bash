@@ -51,6 +51,7 @@ change_character() {
                 list_character=1
                 ;;
             2)  choose_character=0
+                list_character=1
                 lobby
                 ;;
             *)  choose_character=0
