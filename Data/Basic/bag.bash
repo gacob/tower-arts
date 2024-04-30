@@ -6,7 +6,7 @@ bag=(
     )
 
 bag_info() {
-    echo Placeholder
+    echo "${#bag[*]}"
 }
 
 bag_checker() {
