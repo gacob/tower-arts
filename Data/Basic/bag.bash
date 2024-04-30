@@ -31,6 +31,7 @@ bag_checker() {
                 bag_loop=2
             ;;
             2) bag_replace_choice=0
+                item_carried=0
                 bag_loop=1
             ;;
             *) bag_replace_choice=0
