@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+source data/system/bag.bash
 source data/system/death.bash
 source data/system/save.bash
 source data/system/load.bash
