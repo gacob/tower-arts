@@ -72,5 +72,5 @@ fi
 ### Floor Count
 floor_counter() {
     floor=$(( floor + 1 ))
-    current_hp="$hp_$current_character"
+    current_hp=$hp
 }
