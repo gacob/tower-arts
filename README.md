@@ -131,11 +131,13 @@ Es un array con los objetos para dropear y su index
 
 ### Bag ###
 ## data/basic/bag.bash
+- bag = Array con cada objeto. INDEX es la ID de los objetos
+
 - bag_info() = Te da información sobre los objetos en la mochila
-    - bag = Array con cada objeto. INDEX es la ID de los objetos
 
-- bag_checker = Para equipar objetos (comprueba si hay hueco, si hay, lo utiliza, si no, lo reemplaza)
-
+- bag_checker() = Para equipar objetos (comprueba si hay hueco, si hay, lo utiliza, si no, lo reemplaza)
+    - bag_loop = Utilizado para cambiar entre loops
+    - bag_replace_choice = Para elegir qué objeto reemplazar
 
 <h1> Texto </h1>
 - text_1 = Array con líneas en Español
