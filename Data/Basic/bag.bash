@@ -1,11 +1,12 @@
 #!/bin/bash
 
-bag_info() {
-    bag=(
+bag=(
         [0]=Prueba
         [1]=Prueba2
     )
-    
+
+bag_info() {
+    echo Placeholder
 }
 
 bag_checker() {
@@ -40,7 +41,7 @@ bag_checker() {
     # Reemplaza objeto
     while [[ $bag_loop -eq 2 ]]; do
         echo ¿Qué objeto quieres reemplazar?
-        "${#bag[*]}"
+        echo "${#bag[*]}"
         read -r bag_replace_choice
 
         if [[ $bag_replace_choice -eq * ]]; then
