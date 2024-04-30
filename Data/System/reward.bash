@@ -16,6 +16,7 @@ reward_drop() {
         [[ $drop_randomized -ge $value ]];
         echo Has obtenido "${drop[$value]}"
         item_carried="${drop[$value]}"
+        bag_checker
         break
     done
 }
