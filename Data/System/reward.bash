@@ -15,7 +15,7 @@ reward_drop() {
     for value in "${drop[@]}"; do
         [[ $drop_randomized -ge $value ]];
         echo Has obtenido "${drop[$value]}"
-        item_1="${drop[$value]}"
+        item_carried="${drop[$value]}"
         break
     done
 }

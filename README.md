@@ -106,6 +106,7 @@
     - drop_chances = Array 0-100 usado para randomizar drops
     - drop_randomized = Get a random number from the previous array 0-100
     - value = Valor de un bucle For para comprobar todo el array
+    - item_carried = ID del objeto dropeado (se usa carried para todo objeto disponible para equipar)
 - reward_gold() = Cuánto oro se dropea. Totalmente aleatorio (moneda del vicio)
     - gold_chances = Array de 0-100
     - drop_gold_randomized = Número aleatorio del array para sumártelo como oro
@@ -126,6 +127,14 @@ Es un array con los objetos para dropear y su index
 
 ### Santuario ###
 ## data/basic/shrine.bash
+
+
+### Bag ###
+## data/basic/bag.bash
+- bag_info() = Te da información sobre los objetos en la mochila
+    - bag = Array con cada objeto. INDEX es la ID de los objetos
+
+- bag_checker = Para equipar objetos (comprueba si hay hueco, si hay, lo utiliza, si no, lo reemplaza)
 
 
 <h1> Texto </h1>
