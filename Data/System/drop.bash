@@ -4,8 +4,8 @@ drop_chances=(0-100)
 gold_chances=(0-100)
 
 reward_exp() {
-    experience=$(( experience + (( level / mob_level ) * 5 ) ))
-    echo Has obtenido $(( ( level / mob_level ) * 5 )) de experiencia.
+    experience=$(( experience + ( level * 5 ) ))
+    echo Has obtenido $(( level  * 5 )) de experiencia.
 }
 
 
