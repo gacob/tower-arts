@@ -15,5 +15,7 @@ character_template_1() {
 }
 
 character_skillset_1() {
-    echo 
+    c_skill_1=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
+    c_skill_1_text="$character_name usa [Golpe Básico]"
+    
 }

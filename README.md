@@ -43,7 +43,10 @@
     - speed = Velocidad (decide quién empieza el turno)
     - crit_r_1 = Crit Rate
     - crit_h_1 = Crit Hit (Daño del ataque crítico) - Mínimo debería de ser 150
-- character_skil_set_1() = La pasiva + dos habilidades primarias del personaje
+- character_skillset_1() = La pasiva + dos habilidades primarias del personaje
+    - c_skill_1 = 1º Habilidad
+    - c_skill_1_text = Texto al lanzar la 1º habilidad
+
 
 
 ### Mob Template ###
