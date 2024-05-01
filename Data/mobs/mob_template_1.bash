@@ -11,7 +11,7 @@ mob_template_1() {
     mob_atk_m=5
     mob_def_p=10
     mob_def_m=2
-    speed=10
+    mob_speed=10
 
     ## Mob Scaling
     escale=$(( level * 1 ))

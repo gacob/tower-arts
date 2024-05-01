@@ -14,6 +14,6 @@ character_template_2 () {
     crit_h_2=150
 }
 
-character_skillset_1() {
+character_skillset_2() {
     echo 
 }
