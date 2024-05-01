@@ -6,7 +6,17 @@ bag=(
     )
 
 bag_info() {
-    echo "${#bag[*]}"
+    exit_bag=0
+    while [[ $exit_bag -eq 0 ]]; do
+        echo "${#bag[*]}"
+        read -r -p "Pulsa 1 para volver" exit_bag
+        case $exit_bag in
+            1)  exit_bag=1
+                ;;
+            *)  echo Introduce un valor válido
+                ;;
+        esac
+    done
 }
 
 bag_checker() {
