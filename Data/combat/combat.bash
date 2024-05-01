@@ -8,9 +8,9 @@ character_turn(){
     echo 1. Atacar
     echo 2. Mochila
 
-    while [[ $myturn_option -ne 1 || $myturn_option -ne 2 ]]; do
-        myturn_option=0
-        read -r -p "¿Qué quieres hacer?" myturn_option
+    myturn_option=0
+    read -r -p "¿Qué quieres hacer?" myturn_option
+    while [[ $myturn_option -ne 0 ]]; do
         case $myturn_option in
             1)  while [[ $character_move -lt 1 || $character_move -gt 4 ]]; do
                     character_skillset_1
@@ -23,6 +23,7 @@ character_turn(){
                     case $character_move in
                         1)  echo "$c_skill_1_text"
                             mob_current_hp=$((mob_current_hp - mob_skill_1))
+                            break 2
                             ;;
 
                         2)  echo "$c_skill_2_text"
@@ -49,14 +50,16 @@ character_turn(){
                             ;;
                     esac
                 done
+                ;;
 
             2)  bag_info
+                myturn_option=0
                 ;;
 
             *)  echo "Elige una opción válida"
                 ;;
-            esac
-        done
+        esac
+    done
 }
 
 character_turn
