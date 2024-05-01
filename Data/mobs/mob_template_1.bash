@@ -32,6 +32,12 @@ mob_template_1() {
 mob_skillset_1() {
     mob_skill_1=$(( (mob_atk_p * 2 ) * ( full_percent - current_def ) / "full_percent" ))
     mob_skill_1_text="$mob_name usa [Golpe Básico]"
+    mob_skill_2=$(( (mob_atk_p * 2 ) * ( full_percent - current_def ) / "full_percent" ))
+    mob_skill_2_text="$mob_name usa [Golpe Duro]"
+    mob_skill_3=$(( (mob_atk_p * 2 ) * ( full_percent - current_def ) / "full_percent" ))
+    mob_skill_3_text="$mob_name usa [Golpe Feo]"
+    mob_skill_4=$(( (mob_atk_p * 2 ) * ( full_percent - current_def ) / "full_percent" ))
+    mob_skill_4_text="$mob_name usa [Golpe Infernal]"
 
     #after_left_hp=$(( hp - "mob_skill_"$randomized_skill"" ))
 }
