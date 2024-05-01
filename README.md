@@ -59,9 +59,7 @@ mob_template_1() = Plantilla con las stats y escalado del primer bicho. Llamado 
     - mob_def_p
     - mob_def_m
     - speed
-    - escale = Escalado de
-    - mob_hp = Escalado de vida por nivel
-    - mob_atk
+    - escale = Escalado de stats por nivel
 
 mob_skillset_1() = Plantilla con las habilidades del mob 1
     - mob_skill_1 = Habilidad 1 del mob (Golpe Básico)
