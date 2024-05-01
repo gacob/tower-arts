@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source combat.bash
+
 mob_battle(){
 
     mob_current_hp=$mob_hp
@@ -17,3 +19,5 @@ mob_battle(){
         done
     fi
 }
+
+mob_battle
