@@ -51,6 +51,7 @@
 
 ### Mob Template ###
 ## data/mobs
+mob_template_1() = Plantilla con las stats y escalado del primer bicho. Llamado al inicio de una pelea
     - mob_name
     - mob_hp
     - mob_atk_p
@@ -58,12 +59,14 @@
     - mob_def_p
     - mob_def_m
     - speed
-    - mob_skill_1 = Habilidad 1 del mob (Golpe Básico)
-    - mob_skill_1_text = Texto cuando lanza la habilidad
-    - after_left_hp = Vida que le quita al jugador tras lanzar la habilidad (por completar)
     - escale = Escalado de
     - mob_hp = Escalado de vida por nivel
     - mob_atk
+
+mob_skillset_1() = Plantilla con las habilidades del mob 1
+    - mob_skill_1 = Habilidad 1 del mob (Golpe Básico)
+    - mob_skill_1_text = Texto cuando lanza la habilidad
+
 
 ### Save ###
 ## data/system/save.bash
