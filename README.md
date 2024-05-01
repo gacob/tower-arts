@@ -103,8 +103,8 @@ mob_skillset_1() = Plantilla con las habilidades del mob 1
     - dead = Se vuelve 1 si has muerto.
 
 
-### Reward ###
-## data/system/reward.bash
+### Drop System ###
+## data/system/drop.bash
 - reward_exp() = Da experiencia basado en nivel
 - reward_drop() = % de dropear objetos
     - drop_chances = Array 0-100 usado para randomizar drops
@@ -117,8 +117,8 @@ mob_skillset_1() = Plantilla con las habilidades del mob 1
     - gold = Cuánto oro tienes
 
 
-### Drop ###
-## data/basic/drop.bash
+### Drop Pool ###
+## data/basic/drop_pool.bash
 Es un array con los objetos para dropear y su index
 
 

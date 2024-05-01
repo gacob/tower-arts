@@ -6,9 +6,9 @@ source data/system/save.bash
 source data/system/load.bash
 source data/system/level_up.bash
 source data/system/tower.bash
-source data/system/reward.bash
+source data/system/drop.bash
 source data/basic/lobby.bash
-source data/basic/drop.bash
+source data/basic/drop_pool.bash
 source data/basic/matchmaking.bash
 source data/basic/character.bash
 source data/basic/shop.bash
