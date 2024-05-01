@@ -106,11 +106,12 @@ mob_skillset_1() = Plantilla con las habilidades del mob 1
 ### Drop System ###
 ## data/system/drop.bash
 - reward_exp() = Da experiencia basado en nivel
+
 - reward_drop() = % de dropear objetos
     - drop_chances = Array 0-100 usado para randomizar drops
     - drop_randomized = Get a random number from the previous array 0-100
-    - value = Valor de un bucle For para comprobar todo el array
     - item_carried = ID del objeto dropeado (se usa carried para todo objeto disponible para equipar)
+
 - reward_gold() = Cuánto oro se dropea. Totalmente aleatorio (moneda del vicio)
     - gold_chances = Array de 0-100
     - drop_gold_randomized = Número aleatorio del array para sumártelo como oro
