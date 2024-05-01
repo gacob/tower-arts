@@ -1,9 +1,5 @@
 #!/bin/bash
 
-source ../Basic/bag.bash
-source ../character/character_1.bash
-source mob_turn.bash
-
 character_turn(){
     echo Tu turno
     echo 1. Atacar

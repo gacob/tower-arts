@@ -28,5 +28,3 @@ reward_gold() {
     gold=$(( gold + drop_gold_randomized ))
     echo Has ganado $drop_gold_randomized monedas del vicio.
 }
-
-reward_drop

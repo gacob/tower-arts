@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source combat.bash
 
 mob_battle(){
 
@@ -19,5 +18,3 @@ mob_battle(){
         done
     fi
 }
-
-mob_battle
