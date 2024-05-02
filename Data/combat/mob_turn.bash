@@ -13,5 +13,11 @@ mob_turn(){
     current_hp=$(( current_hp - mob_damage ))
 
     echo "$current_hp"
+
+    dead
+
+    if [[ $dead -eq 1 ]]; then
+        death
+    fi
     
 }
