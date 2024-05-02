@@ -9,6 +9,7 @@ mob_turn(){
     echo "${!mob_attack}"
 
     mob_damage=mob_skill_${random_skill}
+    echo "${!mob_damage}"
 
     current_hp=$(( current_hp - mob_damage ))
 
