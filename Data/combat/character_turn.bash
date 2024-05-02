@@ -50,6 +50,13 @@ character_turn(){
                         *)  echo "Elige una opción válida"
                             ;;
                     esac
+
+                    echo Vida restante monstruo: "$mob_current_hp"
+
+                    if [[ $mob_current_hp -le 0 ]]; then
+                        ((mob_count--))
+                        echo No bajes la guardia, aún te quedan "$mob_count"
+                    fi
                 done
                 ;;
 
@@ -62,5 +69,6 @@ character_turn(){
         esac
     done
 }
+
 
 
