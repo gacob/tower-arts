@@ -3,6 +3,11 @@
 
 mob_battle(){
 
+    character_template_1
+    character_skillset_1
+    mob_template_1
+    mob_skillset_1
+
     current_hp=hp_${current_character}
 
     echo "${!current_hp}"
