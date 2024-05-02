@@ -12,7 +12,6 @@ character_turn(){
         case $myturn_option in
             1)  character_move=0
                 while [[ $character_move -ge 0 ]]; do
-                    character_skillset_1
                     echo "$c_skill_1_name"
                     echo "$c_skill_2_name"
                     echo "$c_skill_3_name"
