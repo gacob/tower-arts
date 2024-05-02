@@ -3,6 +3,10 @@
 
 mob_battle(){
 
+    current_hp=hp_${current_character}
+
+    echo "${!current_hp}"
+
     mob_current_hp=$mob_hp
 
 
