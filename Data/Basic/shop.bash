@@ -45,12 +45,16 @@ tienda() {
                             item_carried=$shop_item_1
                             bag_checker
                             check=0
+                            floor_counter
+                            floor_random
                             ;;
                         2)  echo Segunda compra
                             shop_choice=0
                             item_carried=$shop_item_2
                             bag_checker
                             check=0
+                            floor_counter
+                            floor_random
                             ;;
                         *)
                             shop_choice=0
@@ -61,6 +65,8 @@ tienda() {
                 
             2) shop_choice=0
                 check=1
+                floor_counter
+                floor_random
             ;;
             *)
                 shop_choice=0
