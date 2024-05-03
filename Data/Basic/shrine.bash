@@ -66,6 +66,8 @@ santuario() {
         echo Después de estar un rato con las burbujas, vuelves a tu dimensión.
         sleep 1
         shrine_option=0
+        floor_counter
+        floor_random
         ;;
         2)
         echo Han subido algunas de tus estadísticas.
@@ -98,5 +100,7 @@ santuario() {
         echo Después de descansar, vuelves a tu dimensión.
         sleep 1
         shrine_option=0
+        floor_counter
+        floor_random
     esac
 }
