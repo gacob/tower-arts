@@ -53,15 +53,12 @@ else
     floor_randomized=$(( RANDOM%floor_chances ))
 
     if [[ $floor_randomized -le 80 ]]; then
-    echo Enemigo
     mob_battle
     else
         floor_randomized=$(( RANDOM%floor_chances ))
         if [[ $floor_randomized -le 50 ]]; then
-            echo Tienda
             tienda
-        else
-            echo Santuario # vida, potenciadores de stats...
+        else # vida, potenciadores de stats...
             santuario
         fi
     fi
