@@ -6,10 +6,10 @@ tienda() {
     contador=0
 
     # Seleccionamos 2 objetos para la tienda
-    while [[ $contador -lt 4 ]]; do
+    while [[ $contador -lt 2 ]]; do
         random_shop_option=$(( RANDOM%shop_option))
         
-        shop_item_[contador]="${#drop[$random_shop_option]}"
+        shop_item_[contador]="${#drop_pool[$random_shop_option]}"
         contador+=
     done
 
