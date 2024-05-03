@@ -1,16 +1,36 @@
 #!/bin/bash
 
-shop_option=(0-100)
+shop_option=(0-5)
+
 
 tienda() {
-    contador=0
+    contador=1
+    drop_name=(
+    [0]="Joel Legendario"
+    [1]="Joel Épico"
+    [2]="Vela del Infierno"
+    [3]="Martillo Perdido de un Borracho"
+    [4]="Gafas con grado de Miopía"
+    [5]="Bastón de Andar de Dios"
+)
+
+drop_chance=(
+    [10]=0
+    [20]=1
+    [80]=2
+    [45]=3
+    [95]=4
+    [4]=5
+)
 
     # Seleccionamos 2 objetos para la tienda
-    while [[ $contador -lt 2 ]]; do
-        random_shop_option=$(( RANDOM%shop_option))
+    while [[ $contador -le 2 ]]; do
+        random_shop_option=$(( RANDOM%shop_option + 1))
         
-        shop_item_[contador]="${#drop_pool[$random_shop_option]}"
-        contador+=
+        declare "shop_item_${contador}=${drop_name[$random_shop_option]}"
+        declare "precio_${contador}=$(( RANDOM%shop_option + 50 ))"
+
+        contador=$(( contador + 1))
     done
 
     sleep 1
@@ -19,8 +39,8 @@ tienda() {
     ## ¿Comprar o Vender?
     while [[ $check -eq 0 ]]; do
         echo 
-        echo 1. "$shop_item_1"
-        echo 2. "$shop_item_2"
+        echo 1. "$shop_item_1" - Precio: "$precio_1" Monedas del Vicio
+        echo 2. "$shop_item_2" - Precio: "$precio_2" Monedas del Vicio
         echo 
         echo ¿Quieres comprar algún objeto?
         echo 1. Comprar. 2. Volver
@@ -74,3 +94,5 @@ tienda() {
         esac
     done
 }
+
+tienda
