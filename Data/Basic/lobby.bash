@@ -21,7 +21,49 @@ lobby (){
     echo "ip 1" "$cliente_ip_1"
     echo "ip 2" "$cliente_ip_2"
 
-    choose_character
+    # Asignación de Personaje
+    current=$NCAT_REMOTE_ADDR
+    current="${current//./}"
+    choosing=1
+
+    rm character_choice
+    touch character_choice
+    echo $choosing >> character_choice
+
+    # Jugador 1
+    echo ¿Qué personaje deseas elegir?
+    if [[ "$current" -eq "$cliente_ip_1" ]]; then
+        choose_character
+        choosing=1
+        echo $choosing >> "$( sed -n 1p ../../../character_choice )"
+    else
+        echo "Jugador 1 está eligiendo personaje."
+
+        while [[ $choosing -eq 1 ]]; do
+            p_first_character=$( sed -n 1p ../../../character_first_player )
+            choosing=$( sed -n 1p ../../../character_choice )
+        done
+
+        sleep 1
+        case $p_first_character in
+            1) echo "El Jugador 1 ha elegido $character_name_1"
+                sleep 1
+                echo Jugarás como "$character_name_2"
+                p_second_character=2
+                echo "$p_second_character" >> character_second_player
+            ;;
+            2) echo "El Jugador 1 ha elegido $character_name_2"
+                sleep 1
+                echo Jugarás como "$character_name_1"
+                p_second_character=1
+                echo "$p_second_character" >> character_second_player
+        esac
+    fi
+
+    #Jugador 2
+
+
+    info_character
     echo "1. Entrar en la torre"
     echo "2. Menú inicio"
     echo "3. Salir del juego"

@@ -5,7 +5,7 @@ full_percent=100
 ### Personaje 1 (Por Defecto): El Narcisista
 character_template_1() {
     character_name_1="El Narcisista"
-    character_description_1="El infierno sólo está caliente porque está él"
+    character_description_1="El infierno sólo está caliente porque está él."
     hp_1=100
     atk_p_1=10
     atk_m_1=1
