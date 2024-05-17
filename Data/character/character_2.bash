@@ -10,8 +10,6 @@ character_template_2 () {
     def_p_2=5
     def_m_2=5
     speed_2=5
-    crit_r_2=2
-    crit_h_2=150
 }
 
 character_skillset_2() {
