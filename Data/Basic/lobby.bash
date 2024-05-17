@@ -32,7 +32,7 @@ lobby (){
     touch character_choice
     touch character_first_player
     touch character_second_player
-    
+
     echo $choosing >> character_choice
 
     # Jugador 1
@@ -49,6 +49,7 @@ lobby (){
             choosing=$( sed -n 1p ../../../character_choice )
         done
 
+        #Jugador 2
         sleep 1
         case $p_first_character in
             1) echo "El Jugador 1 ha elegido $character_name_1"
@@ -65,7 +66,6 @@ lobby (){
         esac
     fi
 
-    #Jugador 2
 
 
     info_character
