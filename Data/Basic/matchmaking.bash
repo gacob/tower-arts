@@ -5,8 +5,8 @@
 join_tower() {
     welcome
     while [[ $dead -ne 1 ]]; do
-        floor_random
         floor_counter
+        floor_random
     done
     death
 }

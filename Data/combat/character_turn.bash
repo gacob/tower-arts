@@ -20,12 +20,14 @@ character_turn(){
                     read -r -p "¿Cúal será tu próximo movimiento...?" character_move
                     case $character_move in
                         1)  echo "$c_skill_1_text"
-                            mob_current_hp=$((mob_current_hp - mob_skill_1))
+                            echo Daño otorgado: "$c_skill_1"
+                            mob_current_hp=$((mob_current_hp - c_skill_1))
                             break 2
                             ;;
 
                         2)  echo "$c_skill_2_text"
-                            mob_current_hp=$((mob_current_hp - mob_skill_2))
+                            echo Daño otorgado: "$c_skill_2"
+                            mob_current_hp=$((mob_current_hp - c_skill_2))
                             break 2
                             ;;
 
@@ -33,7 +35,8 @@ character_turn(){
                                 echo No tienes ninguna habilidad aquí. Selecciona otra
                             else
                                 echo "$c_skill_3_text"
-                                mob_current_hp=$((mob_current_hp - mob_skill_3))
+                                echo Daño otorgado: "$c_skill_3"
+                                mob_current_hp=$((mob_current_hp - c_skill_3))
                                 break 2
                             fi
                             ;;
@@ -42,7 +45,8 @@ character_turn(){
                                 echo No tienes ninguna habilidad aquí. Selecciona otra
                             else
                                 echo "$c_skill_4_text"
-                                mob_current_hp=$((mob_current_hp - mob_skill_4))
+                                echo Daño otorgado: "$c_skill_4"
+                                mob_current_hp=$((mob_current_hp - c_skill_4))
                                 break 2
                             fi
                             ;;
@@ -50,13 +54,6 @@ character_turn(){
                         *)  echo "Elige una opción válida"
                             ;;
                     esac
-
-                    echo Vida restante monstruo: "$mob_current_hp"
-
-                    if [[ $mob_current_hp -le 0 ]]; then
-                        ((mob_count--))
-                        echo No bajes la guardia, aún te quedan "$mob_count"
-                    fi
                 done
                 ;;
 
@@ -68,6 +65,11 @@ character_turn(){
                 ;;
         esac
     done
+    echo Vida restante monstruo: "$mob_current_hp"
+    if [[ $mob_current_hp -le 0 ]]; then
+        ((mob_count--))
+        echo No bajes la guardia, aún te quedan "$mob_count"
+    fi
 }
 
 

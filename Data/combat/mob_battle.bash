@@ -33,4 +33,7 @@ mob_battle(){
             done
         fi
     done
+
+    floor_counter
+    floor_random
 }

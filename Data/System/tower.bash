@@ -53,12 +53,12 @@ else
     # 0-80% Enemigos
     # 20% Otra cosa. Ahí ya es 50/50
     floor_randomized=$(( RANDOM%floor_chances ))
-    
+
     if [[ $floor_randomized -le 80 ]]; then
         echo Enemigo
         mob_battle
     else
-        echo Santuario # vida, potenciadores de stats...
+        echo Santuario
         santuario
     fi
 fi
