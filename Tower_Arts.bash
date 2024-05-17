@@ -29,7 +29,6 @@ start_menu (){
         1) start_option=0
             redirect=1
             first_time=1
-            default_character
             lobby
             ;;
         2)  start_option=0

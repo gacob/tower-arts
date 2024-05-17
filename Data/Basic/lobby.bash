@@ -1,7 +1,7 @@
 #!/bin/bash
 
 lobby (){
-    info_character
+    choose_character
     echo "1. Entrar en la torre"
     echo "2. Menú inicio"
     echo "3. Salir del juego"
