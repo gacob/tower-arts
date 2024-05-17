@@ -69,6 +69,8 @@ lobby (){
     echo "3. Salir del juego"
 
     read -r -s -n 1 lobby_option
+    echo "$lobby_option" >> lobby_option
+    lobby_option=$( sed -n 1p ../../../lobby_option )
 
     case $lobby_option in
         1)  join_tower
