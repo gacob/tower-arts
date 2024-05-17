@@ -66,6 +66,7 @@ lobby (){
         esac
     fi
 
+    p_second_character=$( sed -n 1p ../../../character_second_player )
 
 
     info_character
