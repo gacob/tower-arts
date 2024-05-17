@@ -4,15 +4,11 @@ source data/system/death.bash
 source data/system/level_up.bash
 source data/system/tower.bash
 source data/system/drop.bash
-source data/basic/bag.bash
 source data/basic/element.bash
 source data/basic/lobby.bash
-source data/basic/drop_pool.bash
 source data/basic/matchmaking.bash
 source data/basic/character.bash
-source data/basic/shop.bash
 source data/basic/shrine.bash
-source data/locale/spanish.bash
 source data/character/character_1.bash
 source data/character/character_2.bash
 source data/mobs/mob_template_1.bash
