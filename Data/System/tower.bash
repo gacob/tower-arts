@@ -15,10 +15,11 @@ if [[ $hardcore -eq 0 || $first_time -eq 1 ]]; then
     echo ¿Qué? ¿Que no has oído hablar de mí? Pensaba que en el infierno ya os había llegado el 5G.
     sleep 1
     echo ¡De todos modos! A lo que hemos venido...
+    sleep 1
     echo ¡Bienvenido a la Torre de la Ascensión!
     sleep 1
     echo Aquí te enfrentarás a numerosos retos que pondrán a prueba tu fé y virtud, de modo que nosotros, los ángeles, podemos evaluar si hace falta sacarte de este hollo.
-    sleep 1
+    sleep 2
     echo ¡Buena suerte!
     sleep 1
     floor=1
@@ -47,23 +48,18 @@ if [[ "$floor"%10 -eq 0 ]]; then
     echo BOSS FIGHT
     boss_fight
 else
+
     ## Probabilides:
     # 0-80% Enemigos
     # 20% Otra cosa. Ahí ya es 50/50
     floor_randomized=$(( RANDOM%floor_chances ))
-
+    
     if [[ $floor_randomized -le 80 ]]; then
-    echo Enemigo
-    mob_battle
+        echo Enemigo
+        mob_battle
     else
-        floor_randomized=$(( RANDOM%floor_chances ))
-        if [[ $floor_randomized -le 50 ]]; then
-            echo Tienda
-            tienda
-        else
-            echo Santuario # vida, potenciadores de stats...
-            santuario
-        fi
+        echo Santuario # vida, potenciadores de stats...
+        santuario
     fi
 fi
 }

@@ -3,13 +3,13 @@
 santuario() {
     echo Todo a tu alrededor se desvanece...
     sleep 1
-    echo De pronto te encuentras frente un escritorio con una señora sentada y mirándote fíjamente
+    echo De pronto te encuentras frente un escritorio con una señora sentada y mirándote fíjamente.
     sleep 1
     echo Bienvenido cariño a la Dimensión-616.
     echo Este lugar es un sitio para que nuestros héroes, como tú, descansen.
     sleep 1
     echo No te preocupes, nuestros servicios son de la más alta clase. Tenemos un largo historial de héroes que han pasado por aquí, como Iron-man y Florida-man, incluso el famoso Batman.
-    sleep 1
+    sleep 2
 
     shrine_option=0
     while [[ $shrine_option -eq 0 ]]; do

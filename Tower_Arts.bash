@@ -1,8 +1,6 @@
 #!/bin/bash
 
 source data/system/death.bash
-source data/system/save.bash
-source data/system/load.bash
 source data/system/level_up.bash
 source data/system/tower.bash
 source data/system/drop.bash
@@ -25,33 +23,20 @@ source data/combat/mob_count.bash
 
 
 start_menu (){
-    echo "1. Continuar partida"
-    echo "2. Nueva partida"
-    echo "3. Cargar partida"
-    echo "4. Salir"
+    echo "1. Nueva partida"
+    echo "2. Salir"
     echo
 
     read -r -s -n 1 start_option
 
     case $start_option in
-        1)  start_option=0
-            continue_game
-            ;;
-
-        2) start_option=0
+        1) start_option=0
             redirect=1
             first_time=1
             default_character
-            save
             lobby
             ;;
-
-        3)  start_option=0
-            redirect=2
-            load
-            ;;
-
-        4)  start_option=0
+        2)  start_option=0
             while [[ $yn != [yY] || $yn != [nN] ]]; do
             echo
             read -r -p "¿Estás seguro que quieres salir? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)" -s -n 1 yn

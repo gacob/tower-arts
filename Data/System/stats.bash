@@ -20,13 +20,13 @@ def_m(){
 }
 
 speed(){
-    
+    echo IN BUILDING
 }
 
 crit_r(){
-
+    echo IN BUILDING
 }
 
 crit_h(){
-
+    echo IN BUILDING
 }
