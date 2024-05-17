@@ -54,6 +54,11 @@ else
     # 20% Otra cosa. Ahí ya es 50/50
     floor_randomized=$(( RANDOM%floor_chances ))
 
+    rm floor_randomized
+    touch floor_randomized
+    echo "$floor_randomized" >> floor_randomized
+    floor_randomized=$( sed -n 1p ../../../floor_randomized)
+
     if [[ $floor_randomized -le 80 ]]; then
         echo Enemigo
         mob_battle

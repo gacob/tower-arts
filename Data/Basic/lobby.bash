@@ -27,7 +27,12 @@ lobby (){
     choosing=1
 
     rm character_choice
+    rm character_first_player
+    rm character_second_player
     touch character_choice
+    touch character_first_player
+    touch character_second_player
+    
     echo $choosing >> character_choice
 
     # Jugador 1
@@ -68,6 +73,8 @@ lobby (){
     echo "2. Menú inicio"
     echo "3. Salir del juego"
 
+    rm lobby_option
+    touch lobby_option
     read -r -s -n 1 lobby_option
     echo "$lobby_option" >> lobby_option
     lobby_option=$( sed -n 1p ../../../lobby_option )
