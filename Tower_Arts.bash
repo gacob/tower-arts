@@ -27,7 +27,7 @@ start_menu (){
 
     case $start_option in
         1) start_option=0
-            redirect=1
+            # shellcheck disable=SC2034
             first_time=1
             lobby
             ;;
