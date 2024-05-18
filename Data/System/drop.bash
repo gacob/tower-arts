@@ -13,5 +13,5 @@ reward_gold() {
     drop_gold_randomized=$(( RANDOM%gold_chances ))
 
     gold=$(( gold + drop_gold_randomized ))
-    echo Has ganado $drop_gold_randomized Monedas del Vicio.
+    echo Has obtenido $drop_gold_randomized Monedas del Vicio.
 }
