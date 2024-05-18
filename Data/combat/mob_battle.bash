@@ -40,21 +40,46 @@ mob_battle(){
 
     echo La vida del monstruo es: "$mob_current_hp"
 
-
+    sleep 1
+    echo Si muere uno, el desafio a la Torre de la Ascensión terminará.
+    sleep 1
 
     while [[ $mob_count -ne 0 ]]; do
         if [[ $speed_1 -ge $mob_speed ]]; then
-            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
-                if [[ $current_hp_1 -gt 0 ]] then
+            while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
+
+                current=$NCAT_REMOTE_ADDR
+                current="${current//./}"
+
+                combat=1
+                rm combat_data
+                touch combat_data
+                echo $combat >> combat_data
+
+                if [[ $current -eq $cliente_ip_1 ]] then
                     character_1_turn
+                else
+                    echo "Es el turno del Jugador 1"
+
+                    while [[ $combat -eq 1 ]]; do
+                        combat=$( sed -n 1p ../../../combat_data )
+                    done
                 fi
+
                 if [[ $current_hp_2 -gt 0 ]] then
                     character_2_turn
+                else
+                    echo "Es el turno del Jugador 2"
+
+                    while [[ $combat -eq 2 ]]; do
+                        combat=$( sed -n 1p ../../../combat_data )
+                    done
                 fi
+
                 mob_turn
             done
         else
-            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
+            while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
                 mob_turn
                 if [[ $current_hp_1 -gt 0 ]] then
                     character_1_turn
