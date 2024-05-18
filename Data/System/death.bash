@@ -12,7 +12,7 @@ death() {
 
 
 dead() {
-    if [[ $current_hp -le 0 ]]; then
+    if [[ $current_hp_1 -le 0 || $current_hp_2 -le 0 ]]; then
         dead=1
     fi
 }
