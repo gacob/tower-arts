@@ -121,7 +121,6 @@ mob_battle(){
     done
 
     reward_exp
-    reward_gold
     floor_counter
     floor_random
 }
