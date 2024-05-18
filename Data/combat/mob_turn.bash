@@ -11,9 +11,15 @@ mob_turn(){
     mob_damage="mob_skill_${random_skill}"
     echo Daño recibido: "${!mob_damage}"
 
-    current_hp=$(( current_hp - mob_damage ))
+    random_target=$(RANDOM % 2 + 1)
 
-    echo "$current_hp"
+    if [[ $random_target -eq 1 ]]; then
+        current_hp_1=$(( current_hp_1 - mob_damage ))
+        echo "Al Jugador 1 le quedan $current_hp_1 puntos de vida."
+    else
+        current_hp_2=$(( current_hp_2 - mob_damage ))
+        echo "Al Jugador 2 le quedan $current_hp_2 puntos de vida."
+    fi
 
     dead
 
