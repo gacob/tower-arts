@@ -39,9 +39,6 @@ mob_battle(){
     mob_current_hp=$mob_hp
 
     echo La vida del monstruo es: "$mob_current_hp"
-
-    sleep 1
-    echo Si muere uno, el desafio a la Torre de la Ascensión terminará.
     sleep 1
 
     while [[ $mob_count -ne 0 ]]; do
