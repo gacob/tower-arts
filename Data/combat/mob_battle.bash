@@ -44,14 +44,16 @@ mob_battle(){
 
     while [[ $mob_count -ne 0 ]]; do
         if [[ $speed_1 -ge $mob_speed ]]; then
-            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 || $mob_count -gt 0 ]]; do
-                character_turn
+            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 || $mob_current_hp -gt 0 ]]; do
+                character_1_turn
+                character_2_turn
                 mob_turn
             done
         else
-            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 || $mob_count -gt 0 ]]; do
+            while [[ $current_hp_1 -gt 0 || $current_hp_2 -gt 0 || $mob_current_hp -gt 0 ]]; do
                 mob_turn
-                character_turn
+                character_1_turn
+                character_2_turn
             done
         fi
     done
