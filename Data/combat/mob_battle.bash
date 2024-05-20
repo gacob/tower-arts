@@ -56,7 +56,7 @@ mob_battle(){
                 fi
 
                 # Turno del Jugador 2
-                if [[ $current_hp_2 -gt 0 ]]; then
+                if [[ $current -eq $cliente_ip_2 ]]; then
                     character_2_turn
                 else
                     echo "Es el turno del Jugador 2"
@@ -94,7 +94,7 @@ mob_battle(){
                 fi
                 
                 # Turno del Jugador 2
-                if [[ $current_hp_2 -gt 0 ]]; then
+                if [[ $current -eq $cliente_ip_2 ]]; then
                     character_2_turn
                 else
                     echo "Es el turno del Jugador 2"
