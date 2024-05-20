@@ -15,7 +15,6 @@ source data/mobs/mob_template_1.bash
 source data/combat/character_turn.bash
 source data/combat/mob_turn.bash
 source data/combat/mob_battle.bash
-source data/combat/mob_count.bash
 
 
 start_menu (){
