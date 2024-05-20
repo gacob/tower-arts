@@ -4,7 +4,6 @@ source data/system/death.bash
 source data/system/level_up.bash
 source data/system/tower.bash
 source data/system/drop.bash
-source data/basic/element.bash
 source data/basic/lobby.bash
 source data/basic/matchmaking.bash
 source data/basic/character.bash
