@@ -82,10 +82,6 @@ character_1_turn(){
         fi
     done
 
-
-    rm mob_hp
-    touch mob_hp
-
     echo "$mob_current_hp" >> mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
 
@@ -124,7 +120,7 @@ character_2_turn(){
                 mob_current_hp=$((mob_current_hp - c_1_skill_2))
                 break 2
             fi
-            
+
             if [[ $character_move -eq 3 ]]; then
                 echo "$c_1_skill_3_text"
                 echo "El Jugador 2 ha hecho $c_1_skill_3 puntos de daño."
