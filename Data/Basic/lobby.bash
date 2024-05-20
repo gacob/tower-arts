@@ -16,17 +16,17 @@ lobby (){
         count=$(( count + 1 ))
    esac
 
+    # Wait Room
+    echo Esperando a los dos jugadores...
+
     # Almacenamos las IP
     echo "$cliente_ip_1" >> list_ip
-    cliente_ip_1=$( sed -n 1p ../../list_ip )
+    cliente_ip_1=$( sed -n 1p list_ip )
 
     # Esperamos a que entre el segundo y almacenamos su IP
     while [[ $cliente_ip_1 != "" && $cliente_ip_2 == "" ]]; do
-        cliente_ip_2=$( sed -n 2p ../../list_ip )
+        cliente_ip_2=$( sed -n 2p list_ip )
     done
-
-    # Wait Room
-    echo Esperando a los dos jugadores...
 
     echo "ip 1" "$cliente_ip_1"
     echo "ip 2" "$cliente_ip_2"
@@ -50,13 +50,13 @@ lobby (){
     if [[ "$current" -eq "$cliente_ip_1" ]]; then
         choose_character
         choosing=1
-        echo $choosing >> "$( sed -n 1p ../../character_choice )"
+        echo $choosing >> "$( sed -n 1p character_choice )"
     else
         echo "Jugador 1 está eligiendo personaje."
 
         while [[ $choosing -eq 1 ]]; do
-            p_first_character=$( sed -n 1p ../../character_first_player )
-            choosing=$( sed -n 1p ../../character_choice )
+            p_first_character=$( sed -n 1p character_first_player )
+            choosing=$( sed -n 1p character_choice )
         done
 
         #Jugador 2
@@ -76,7 +76,7 @@ lobby (){
         esac
     fi
 
-    p_second_character=$( sed -n 1p ../../character_second_player )
+    p_second_character=$( sed -n 1p character_second_player )
 
 
     info_character
@@ -88,7 +88,7 @@ lobby (){
     touch lobby_option
     read -r -s -n 1 lobby_option
     echo "$lobby_option" >> lobby_option
-    lobby_option=$( sed -n 1p ../../lobby_option )
+    lobby_option=$( sed -n 1p lobby_option )
 
     case $lobby_option in
         1)  join_tower

@@ -85,7 +85,7 @@ character_1_turn(){
     touch mob_hp
 
     echo "$mob_current_hp" >> mob_hp
-    mob_current_hp=$( sed -n 1p ../../mob_hp )
+    mob_current_hp=$( sed -n 1p mob_hp )
 
     echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes.
 
@@ -180,7 +180,7 @@ character_2_turn(){
     touch mob_hp
 
     echo "$mob_current_hp" >> mob_hp
-    mob_current_hp=$( sed -n 1p ../../mob_hp )
+    mob_current_hp=$( sed -n 1p mob_hp )
 
     echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes.
 
