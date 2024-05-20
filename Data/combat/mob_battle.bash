@@ -30,8 +30,8 @@ mob_battle(){
     rm current_hp_2
     touch current_hp_1
     touch current_hp_2
-    current_hp_1=$( sed -n 1p ../../../current_hp_1 )
-    current_hp_2=$( sed -n 1p ../../../current_hp_2 )
+    current_hp_1=$( sed -n 1p .../../current_hp_1 )
+    current_hp_2=$( sed -n 1p ../../current_hp_2 )
 
     echo "La vida del Jugador 1 es: $current_hp_1"
     echo "La vida del Jugador 2 es: $current_hp_2"
@@ -61,18 +61,18 @@ mob_battle(){
                     echo "Es el turno del Jugador 1"
 
                     while [[ $combat -eq 1 ]]; do
-                        combat=$( sed -n 1p ../../../combat_data )
+                        combat=$( sed -n 1p ../../combat_data )
                     done
                 fi
 
                 # Turno del Jugador 2
-                if [[ $current_hp_2 -gt 0 ]] then
+                if [[ $current_hp_2 -gt 0 ]]; then
                     character_2_turn
                 else
                     echo "Es el turno del Jugador 2"
 
                     while [[ $combat -eq 2 ]]; do
-                        combat=$( sed -n 1p ../../../combat_data )
+                        combat=$( sed -n 1p ../../combat_data )
                     done
                 fi
 
@@ -93,24 +93,24 @@ mob_battle(){
                 echo $combat >> combat_data
 
                 # Turno del Jugador 1
-                if [[ $current -eq $cliente_ip_1 ]] then
+                if [[ $current -eq $cliente_ip_1 ]]; then
                     character_1_turn
                 else
                     echo "Es el turno del Jugador 1"
 
                     while [[ $combat -eq 1 ]]; do
-                        combat=$( sed -n 1p ../../../combat_data )
+                        combat=$( sed -n 1p ../../combat_data )
                     done
                 fi
                 
                 # Turno del Jugador 2
-                if [[ $current_hp_2 -gt 0 ]] then
+                if [[ $current_hp_2 -gt 0 ]]; then
                     character_2_turn
                 else
                     echo "Es el turno del Jugador 2"
 
                     while [[ $combat -eq 2 ]]; do
-                        combat=$( sed -n 1p ../../../combat_data )
+                        combat=$( sed -n 1p ../../combat_data )
                     done
                 fi
             done

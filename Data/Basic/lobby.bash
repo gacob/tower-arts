@@ -2,17 +2,27 @@
 
 lobby (){
 
+
     # Asignación de IP al entrar al servidor
-    cliente_ip_1=$NCAT_REMOTE_ADDR
-    cliente_ip_1="${cliente_ip_1//./}"
+    case $count in
+    1)  cliente_ip_1=$NCAT_REMOTE_ADDR
+        cliente_ip_1="${cliente_ip_1//./}"
+        echo Esta es tu IP: "$cliente_ip_1"
+        count=$(( count + 1 ))
+        ;;
+    2) cliente_ip_2=$NCAT_REMOTE_ADDR
+        cliente_ip_2="${cliente_ip_2//./}"
+        echo Esta es tu IP: "$cliente_ip_2"
+        count=$(( count + 1 ))
+   esac
 
     # Almacenamos las IP
     echo "$cliente_ip_1" >> list_ip
-    cliente_ip_1=$( sed -n 1p ../../../list_ip )
+    cliente_ip_1=$( sed -n 1p ../../list_ip )
 
     # Esperamos a que entre el segundo y almacenamos su IP
     while [[ $cliente_ip_1 != "" && $cliente_ip_2 == "" ]]; do
-        cliente_ip_2=$( sed -n 2p ../../../list_ip )
+        cliente_ip_2=$( sed -n 2p ../../list_ip )
     done
 
     # Wait Room
@@ -40,13 +50,13 @@ lobby (){
     if [[ "$current" -eq "$cliente_ip_1" ]]; then
         choose_character
         choosing=1
-        echo $choosing >> "$( sed -n 1p ../../../character_choice )"
+        echo $choosing >> "$( sed -n 1p ../../character_choice )"
     else
         echo "Jugador 1 está eligiendo personaje."
 
         while [[ $choosing -eq 1 ]]; do
-            p_first_character=$( sed -n 1p ../../../character_first_player )
-            choosing=$( sed -n 1p ../../../character_choice )
+            p_first_character=$( sed -n 1p ../../character_first_player )
+            choosing=$( sed -n 1p ../../character_choice )
         done
 
         #Jugador 2
@@ -66,7 +76,7 @@ lobby (){
         esac
     fi
 
-    p_second_character=$( sed -n 1p ../../../character_second_player )
+    p_second_character=$( sed -n 1p ../../character_second_player )
 
 
     info_character
@@ -78,7 +88,7 @@ lobby (){
     touch lobby_option
     read -r -s -n 1 lobby_option
     echo "$lobby_option" >> lobby_option
-    lobby_option=$( sed -n 1p ../../../lobby_option )
+    lobby_option=$( sed -n 1p ../../lobby_option )
 
     case $lobby_option in
         1)  join_tower

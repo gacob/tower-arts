@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source Tower_Arts.bash
-
 # Iniciar el servidor
 start_server() {
 
@@ -9,6 +7,8 @@ start_server() {
     rm list_ip
     touch list_ip
 
+    export count=1
+    
     # < = Leer
     # > = Escribir
     ncat -m 2 -klv 8080 -e "Tower_Arts.bash"

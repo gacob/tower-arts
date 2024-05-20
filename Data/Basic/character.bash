@@ -30,7 +30,7 @@ choose_character() {
 }
 
 info_character() {
-    p_first_character=$( sed -n 1p ../../../character_first_player )
+    p_first_character=$( sed -n 1p ../../character_first_player )
 
     if [[ $p_first_character -eq 1 ]]; then
         echo "_____________________________"
