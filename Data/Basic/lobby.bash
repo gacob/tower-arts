@@ -1,7 +1,11 @@
 #!/bin/bash
 
 lobby (){
-
+    # Cargando personajes
+    character_template_1
+    character_skillset_1
+    character_template_2
+    character_skillset_2
 
     # Asignación de IP al entrar al servidor
     case $count in
@@ -34,23 +38,14 @@ lobby (){
     # Asignación de Personaje
     current=$NCAT_REMOTE_ADDR
     current="${current//./}"
-    choosing=1
 
-    rm character_choice
-    rm character_first_player
-    rm character_second_player
-    touch character_choice
-    touch character_first_player
-    touch character_second_player
-
-    echo $choosing >> character_choice
+    echo $choosing > character_choice
 
     # Jugador 1
-    echo ¿Qué personaje deseas elegir?
     if [[ "$current" -eq "$cliente_ip_1" ]]; then
         choose_character
-        choosing=1
-        echo $choosing >> "$( sed -n 1p character_choice )"
+        export choosing=0
+        echo $choosing > character_choice
     else
         echo "Jugador 1 está eligiendo personaje."
 
@@ -59,36 +54,47 @@ lobby (){
             choosing=$( sed -n 1p character_choice )
         done
 
-        #Jugador 2
+        rm character_choice
+
         sleep 1
-        case $p_first_character in
-            1) echo "El Jugador 1 ha elegido $character_name_1"
+
+        #Jugador 2
+        if [[ $p_first_character -eq 1 ]]; then
+                echo "El Jugador 1 ha elegido $character_name_1"
                 sleep 1
-                echo Jugarás como "$character_name_2"
+                echo "El Jugador 2 jugará como $character_name_2"
                 p_second_character=2
-                echo "$p_second_character" >> character_second_player
-            ;;
-            2) echo "El Jugador 1 ha elegido $character_name_2"
-                sleep 1
-                echo Jugarás como "$character_name_1"
-                p_second_character=1
-                echo "$p_second_character" >> character_second_player
-        esac
+                echo "$p_second_character" > character_second_player
+        else
+            echo "El Jugador 1 ha elegido $character_name_2"
+            sleep 1
+            echo "El Jugador 2 jugará como $character_name_1"
+            p_second_character=1
+            echo "$p_second_character" > character_second_player
+        fi
     fi
 
-    p_second_character=$( sed -n 1p character_second_player )
+    sleep 1
 
+    p_second_character=$( sed -n 1p character_second_player )
 
     info_character
     echo "1. Entrar en la torre"
     echo "2. Menú inicio"
     echo "3. Salir del juego"
 
-    rm lobby_option
-    touch lobby_option
-    read -r -s -n 1 lobby_option
-    echo "$lobby_option" >> lobby_option
-    lobby_option=$( sed -n 1p lobby_option )
+    if [[ "$current" -eq "$cliente_ip_1" ]]; then
+        read -r -s -n 1 lobby_option
+        echo "$lobby_option" > lobby_option
+    else
+        echo "El Jugador 1 es el líder del grupo."
+        sleep 1
+        echo "El líder del grupo tiene que elegir en el menú."
+
+        while [[ $lobby_option -eq 0 ]]; do
+            lobby_option=$( sed -n 1p lobby_option )
+        done
+    fi
 
     case $lobby_option in
         1)  join_tower

@@ -3,12 +3,6 @@
 
 mob_battle(){
 
-    # Cargando personajes
-    character_template_1
-    character_skillset_1
-    character_template_2
-    character_skillset_2
-
     # Cargando monstruos
     mob_template_1
     mob_skillset_1
@@ -26,10 +20,9 @@ mob_battle(){
         current_hp_2=$hp_2
     fi
 
-    rm current_hp_1
-    rm current_hp_2
-    touch current_hp_1
-    touch current_hp_2
+    echo $current_hp_1 > current_hp_1
+    echo $current_hp_2 > current_hp_2
+
     current_hp_1=$( sed -n 1p current_hp_1 )
     current_hp_2=$( sed -n 1p current_hp_2 )
 
@@ -41,8 +34,7 @@ mob_battle(){
     echo La vida del monstruo es: "$mob_current_hp"
     sleep 1
 
-    while [[ $mob_count -ne 0 ]]; do
-        if [[ $speed_1 -ge $mob_speed ]]; then
+    if [[ $speed_1 -ge $mob_speed ]]; then
             while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
 
                 # Almacenamos la IP del jugador que ve esto
@@ -50,9 +42,7 @@ mob_battle(){
                 current="${current//./}"
 
                 combat=1
-                rm combat_data
-                touch combat_data
-                echo $combat >> combat_data
+                echo $combat > combat_data
 
                 # Turno del Jugador 1
                 if [[ $current -eq $cliente_ip_1 ]]; then
@@ -90,7 +80,7 @@ mob_battle(){
                 combat=1
                 rm combat_data
                 touch combat_data
-                echo $combat >> combat_data
+                echo $combat > combat_data
 
                 # Turno del Jugador 1
                 if [[ $current -eq $cliente_ip_1 ]]; then
@@ -115,7 +105,6 @@ mob_battle(){
                 fi
             done
         fi
-    done
 
     reward_exp
     floor_counter
