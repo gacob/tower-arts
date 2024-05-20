@@ -55,7 +55,7 @@ mob_battle(){
                 echo $combat >> combat_data
 
                 # Turno del Jugador 1
-                if [[ $current -eq $cliente_ip_1 ]] then
+                if [[ $current -eq $cliente_ip_1 ]]; then
                     character_1_turn
                 else
                     echo "Es el turno del Jugador 1"
