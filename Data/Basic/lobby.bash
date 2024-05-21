@@ -39,7 +39,7 @@ lobby (){
     current=$NCAT_REMOTE_ADDR
     current="${current//./}"
 
-    echo $choosing > character_choice
+    echo "$choosing" > character_choice
 
     # Jugador 1
     if [[ "$current" -eq "$cliente_ip_1" ]]; then

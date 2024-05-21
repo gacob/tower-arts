@@ -2,6 +2,8 @@
 
 choose_character() {
 
+    read -r choice_character_x
+    
     while [[ $p_first_character -eq 0 ]]; do
         choice_character_x=0
         echo 
