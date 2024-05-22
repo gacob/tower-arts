@@ -99,24 +99,8 @@ lobby (){
     case $lobby_option in
         1)  join_tower
             ;;
-        2)  while [[ $yn != [yY] || $yn != [nN] ]]; do
-            echo
-            read -r -p "¿Estás seguro que quieres volver al menú de inicio? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)" -s -n 1 yn
-            echo
-            echo
-                case $yn in
-                [yY])   start_menu
-                        ;;
-                [nN])   clear
-                        lobby
-                        ;;
-                
-                *)      echo
-                        echo
-                        echo "Selecciona (y|Y) o (n|N)"
-                        ;;
-                esac
-            done
+
+        2)  start_menu
             ;;
 
         3)  exit
