@@ -15,6 +15,7 @@ choose_character() {
         echo Descripción: "$character_description_1"
         echo Es un personaje especializado en ataque físico.
         echo 
+        sleep 2
         echo 2. Nombre: "$character_name_2"
         echo Descripción: "$character_description_2"
         echo Es un personaje especializado en ataque mágico.
