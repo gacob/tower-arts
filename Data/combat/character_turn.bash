@@ -12,7 +12,8 @@ character_1_turn(){
             echo "$c_1_skill_4_name"
 
             character_move=0
-            read -r -p "¿Cúal será tu próximo movimiento...?" character_move
+            echo "¿Cúal será tu próximo movimiento...?"
+            read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
                 echo "$c_1_skill_1_text"
@@ -49,7 +50,8 @@ character_1_turn(){
             echo "$c_2_skill_4_name"
 
             character_move=0
-            read -r -p "¿Cúal será tu próximo movimiento...?" character_move
+            echo "¿Cúal será tu próximo movimiento...?"
+            read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
                 echo "$c_2_skill_1_text"
@@ -105,7 +107,8 @@ character_2_turn(){
             echo "$c_1_skill_4_name"
 
             character_move=0
-            read -r -p "¿Cúal será tu próximo movimiento...?" character_move
+            echo "¿Cúal será tu próximo movimiento...?"
+            read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
                 echo "$c_1_skill_1_text"
@@ -142,7 +145,8 @@ character_2_turn(){
             echo "$c_2_skill_4_name"
 
             character_move=0
-            read -r -p "¿Cúal será tu próximo movimiento...?" character_move
+            echo "¿Cúal será tu próximo movimiento...?"
+            read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
                 echo "$c_2_skill_1_text"
