@@ -1,7 +1,6 @@
 #!/bin/bash
 
 character_1_turn(){
-    read -r character_move
 
     echo "Turno del Jugador 1"
 

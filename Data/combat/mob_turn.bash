@@ -1,8 +1,7 @@
 #!/bin/bash
 
 mob_turn(){
-    echo Turno del monstruo
-
+    
     random_skill=$(( RANDOM % 4 + 1))
     
     mob_attack="mob_skill_text_${random_skill}"
@@ -15,7 +14,7 @@ mob_turn(){
 
     sed -n 1p skill_text
     sed -n 1p skill_dmg
-    
+
     if [[ $random_target -eq 1 ]]; then
         current_hp_1=$(( current_hp_1 - mob_damage ))
         echo "Al Jugador 1 le quedan $current_hp_1 puntos de vida."
