@@ -31,7 +31,8 @@ start_menu (){
         2)  start_option=0
             while [[ $yn != [yY] || $yn != [nN] ]]; do
             echo
-            read -r -p "¿Estás seguro que quieres salir? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)" -s -n 1 yn
+            echo "¿Estás seguro que quieres salir? (Pulsa y o Y para confirmar. Pulsa n or N para cancelar)"
+            read -r -s -n 1 yn
                 case $yn in
                 [yY])   echo
                         echo
