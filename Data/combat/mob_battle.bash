@@ -128,8 +128,4 @@ mob_battle(){
                 fi
             done
         fi
-
-    reward_exp
-    floor_counter
-    floor_random
 }

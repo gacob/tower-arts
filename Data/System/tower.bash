@@ -37,7 +37,6 @@ if [[ $hardcore -eq 0 || $first_time -eq 1 ]]; then
     echo Pulsa un botón para continuar...
     read -r $unreal
     clear
-    floor=1
 elif [[ $hardcore -eq 0 || $first_time -eq 0 ]]; then
     clear
     echo ¿Has dejado ya de llorar? Te avisé de que esto era un reto real, no uno de esos de retos de Tiktok. Tendría que pedirle a Padre que lo prohiba aquí también...
@@ -52,7 +51,6 @@ elif [[ $hardcore -eq 0 || $first_time -eq 0 ]]; then
     echo Pulsa un botón para continuar...
     read -r $unreal
     clear
-    floor=1
 else
     clear
     echo ¿Tu otra vez?
@@ -63,7 +61,7 @@ else
     echo Pulsa un botón para continuar...
     read -r $unreal
     clear
-    floor=100
+    floor=99
 fi
 }
 
