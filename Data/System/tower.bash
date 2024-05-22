@@ -52,7 +52,6 @@ fi
 ### Floor Randomizer
 floor_random() { # shellcheck disable=SC2309
 if [[ "$floor"%10 -eq 0 ]]; then
-    echo BOSS FIGHT
     boss_fight
 else
 
@@ -67,10 +66,8 @@ else
     floor_randomized=$( sed -n 1p floor_randomized)
 
     if [[ $floor_randomized -le 80 ]]; then
-        echo Enemigo
         mob_battle
     else
-        echo Santuario
         santuario
     fi
 fi
