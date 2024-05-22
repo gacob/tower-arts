@@ -18,29 +18,29 @@ character_1_turn(){
             read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
-                echo "$c_1_skill_1_text"
-                echo "El Jugador 1 ha hecho $c_1_skill_1 puntos de daño."
+                echo "El Jugador 1 $c_1_skill_1_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_1_skill_1 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_1))
                 break 2
             fi
 
             if [[ $character_move -eq 2 ]]; then
-            echo "$c_1_skill_2_text"
-                echo "El Jugador 1 ha hecho $c_1_skill_2 puntos de daño."
+            echo "El Jugador 1 $c_1_skill_2_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_1_skill_2 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_2))
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then
-            echo "$c_1_skill_3_text"
-                echo "El Jugador 1 ha hecho $c_1_skill_3 puntos de daño."
+            echo "El Jugador 1 $c_1_skill_3_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_1_skill_3 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_3))
                 break 2
             fi
             
             if [[ $character_move -eq 4 ]]; then
-            echo "$c_1_skill_4_text"
-                echo "El Jugador 1 ha hecho $c_1_skill_4 puntos de daño."
+            echo "El Jugador 1 $c_1_skill_4_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_1_skill_4 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_4))
                 break 2
             fi
@@ -56,29 +56,29 @@ character_1_turn(){
             read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
-                echo "$c_2_skill_1_text"
-                echo "El Jugador 1 ha hecho $c_2_skill_1 puntos de daño."
+                echo "El Jugador 1 $c_2_skill_1_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_2_skill_1 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_1))
                 break 2
             fi
 
             if [[ $character_move -eq 2 ]]; then
-            echo "$c_2_skill_2_text"
-                echo "El Jugador 1 ha hecho $c_2_skill_2 puntos de daño."
+            echo "El Jugador 1 $c_2_skill_2_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_2_skill_2 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_2))
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then 
-            echo "$c_2_skill_3_text"
-                echo "El Jugador 1 ha hecho $c_2_skill_3 puntos de daño."
+            echo "El Jugador 1 $c_2_skill_3_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_2_skill_3 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_3))
                 break 2
             fi
 
             if [[ $character_move -eq 4 ]]; then
-                echo "$c_2_skill_4_text"
-                echo "El Jugador 1 ha hecho $c_2_skill_4 puntos de daño."
+                echo "El Jugador 1 $c_2_skill_4_text" > skill_text
+                echo "El Jugador 1 ha hecho $c_2_skill_4 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_4))
                 break 2
             fi
@@ -114,29 +114,29 @@ character_2_turn(){
             read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
-                echo "$c_1_skill_1_text"
-                echo "El Jugador 2 ha hecho $c_1_skill_1 puntos de daño."
+                echo "El Jugador 2 $c_1_skill_1_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_1_skill_1 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_1))
                 break 2
             fi
 
             if [[ $character_move -eq 2 ]]; then
-                echo "$c_1_skill_2_text"
-                echo "El Jugador 2 ha hecho $c_1_skill_2 puntos de daño."
+                echo "El Jugador 2 $c_1_skill_2_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_1_skill_2 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_2))
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then
-                echo "$c_1_skill_3_text"
-                echo "El Jugador 2 ha hecho $c_1_skill_3 puntos de daño."
+                echo "El Jugador 2 $c_1_skill_3_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_1_skill_3 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_3))
                 break 2
             fi
 
             if [[ $character_move -eq 4 ]]; then
-                echo "$c_1_skill_4_text"
-                echo "El Jugador 2 ha hecho $c_1_skill_4 puntos de daño."
+                echo "El Jugador 2 $c_1_skill_4_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_1_skill_4 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_1_skill_4))
                 break 2
             fi
@@ -152,29 +152,29 @@ character_2_turn(){
             read -r character_move
 
             if [[ $character_move -eq 1 ]]; then
-                echo "$c_2_skill_1_text"
-                echo "El Jugador 2 ha hecho $c_2_skill_1 puntos de daño."
+                echo "El Jugador 2 $c_2_skill_1_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_2_skill_1 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_1))
                 break 2
             fi
 
             if [[ $character_move -eq 2 ]]; then
-                echo "$c_2_skill_2_text"
-                echo "El Jugador 2 ha hecho $c_2_skill_2 puntos de daño."
+                echo "El Jugador 2 $c_2_skill_2_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_2_skill_2 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_2))
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then
-                echo "$c_2_skill_3_text"
-                echo "El Jugador 2 ha hecho $c_2_skill_3 puntos de daño."
+                echo "El Jugador 2 $c_2_skill_3_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_2_skill_3 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_3))
                 break 2
             fi
 
             if [[ $character_move -eq 4 ]]; then
-                echo "$c_2_skill_4_text"
-                echo "El Jugador 2 ha hecho $c_2_skill_4 puntos de daño."
+                echo "El Jugador 2 $c_2_skill_4_text" > skill_text
+                echo "El Jugador 2 ha hecho $c_2_skill_4 puntos de daño." > skill_dmg
                 mob_current_hp=$((mob_current_hp - c_2_skill_4))
                 break 2
             fi

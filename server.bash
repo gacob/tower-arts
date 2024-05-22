@@ -12,6 +12,8 @@ start_server() {
     rm current_hp_1
     rm current_hp_2
     rm combat_data
+    rm skill_text
+    rm skill_dmg
     rm mob_hp
 
     touch list_ip
@@ -22,6 +24,8 @@ start_server() {
     touch current_hp_1
     touch current_hp_2
     touch combat_data
+    touch skill_text
+    touch skill_dmg
     touch mob_hp
 
     export count=1
