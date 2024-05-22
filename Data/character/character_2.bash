@@ -1,5 +1,7 @@
 #!/bin/bash
 
+full_percent=100
+
 ### Personaje 2: El Perfeccionista
 character_template_2 () {
     character_name_2="El Perfeccionista"
@@ -20,9 +22,9 @@ character_skillset_2() {
     c_2_skill_2=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
     c_2_skill_2_text=" usa [Golpe Duro]"
     c_2_skill_3_name="Vacío"
-    c_2_skill_3=
+    c_2_skill_3=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
     c_2_skill_3_text=" usa [Golpe Feo]"
     c_2_skill_4_name="Vacío"
-    c_2_skill_4=
+    c_2_skill_4=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
     c_2_skill_4_text=" usa [Golpe Celestial]"
 }
