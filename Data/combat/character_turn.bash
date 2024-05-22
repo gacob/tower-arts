@@ -86,8 +86,8 @@ character_1_turn(){
         fi
     done
 
-    echo sed -n 1p skill_text
-    echo sed -n 1p skill_dmg
+    sed -n 1p skill_text
+    sed -n 1p skill_dmg
 
     echo "$mob_current_hp" >> mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
@@ -186,8 +186,8 @@ character_2_turn(){
     done
 
 
-    echo sed -n 1p skill_text
-    echo sed -n 1p skill_dmg
+    sed -n 1p skill_text
+    sed -n 1p skill_dmg
 
     echo "$mob_current_hp" > mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
