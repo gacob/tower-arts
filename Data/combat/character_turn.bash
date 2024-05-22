@@ -1,6 +1,8 @@
 #!/bin/bash
 
 character_1_turn(){
+    read -r character_move
+
     echo "Turno del Jugador 1"
 
     myturn_option=0
@@ -96,6 +98,7 @@ character_1_turn(){
 
 
 character_2_turn(){
+    read -r character_move
     echo "Turno del Jugador 2"
 
     myturn_option=0
