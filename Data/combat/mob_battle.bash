@@ -63,6 +63,9 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+                sed -n 1p skill_text
+                sed -n 1p skill_dmg
+                sed -n 1p skill_hp
 
                 # Turno del Jugador 2
                 if [[ $current -eq $cliente_ip_2 ]]; then
@@ -74,6 +77,9 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+                sed -n 1p skill_text
+                sed -n 1p skill_dmg
+                sed -n 1p skill_hp
 
                 # Turno del Monstruo
                 combat=3
@@ -115,6 +121,10 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+
+                sed -n 1p skill_text
+                sed -n 1p skill_dmg
+                sed -n 1p skill_hp
                 
                 # Turno del Jugador 2
                 if [[ $current -eq $cliente_ip_2 ]]; then
@@ -126,6 +136,11 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+
+                sed -n 1p skill_text
+                sed -n 1p skill_dmg
+                sed -n 1p skill_hp
+                
             done
         fi
 }

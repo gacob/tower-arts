@@ -85,14 +85,10 @@ character_1_turn(){
         fi
     done
 
-    sed -n 1p skill_text
-    sed -n 1p skill_dmg
-
     echo "$mob_current_hp" >> mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
 
     echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes. > skill_dmg
-    sed -n 1p skill_dmg
 
     combat=2
     echo $combat > combat_data
@@ -101,7 +97,7 @@ character_1_turn(){
 
 
 character_2_turn(){
-    
+
     echo "Turno del Jugador 2"
 
     myturn_option=0
@@ -184,15 +180,10 @@ character_2_turn(){
         fi
     done
 
-
-    sed -n 1p skill_text
-    sed -n 1p skill_dmg
-
     echo "$mob_current_hp" > mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
 
-    echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes. > skill_dmg
-    sed -n 1p skill_dmg
+    echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes. > skill_hp
 
 }
 
