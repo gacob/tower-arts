@@ -24,7 +24,7 @@ if [[ $hardcore -eq 0 || $first_time -eq 1 ]]; then
     sleep 1
     echo ¡Ah, antes de que se me olvide!
     sleep 2
-    echo Ya que sois dos, si morís uno de los dos participantes, el desafio a la Torre de la Ascensión terminará y tendréis que volver a empezar de cero. Son las reglas.
+    echo Ya que sois dos, si morís uno de los dos participantes, el desafio de la Torre de la Ascensión terminará y tendréis que volver a empezar de cero. Son las reglas.
     sleep 5
     echo A fin de cuentas, es un poco injusto que estés luchando solo mientras tu compañero está cosiendo sus pedazos... Aquí en la Torre de la Ascensión queremos ser justos.
     sleep 5
