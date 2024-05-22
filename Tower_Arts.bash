@@ -15,6 +15,7 @@ source data/combat/character_turn.bash
 source data/combat/mob_turn.bash
 source data/combat/mob_battle.bash
 
+start_option=0
 
 start_menu (){
     echo "1. Nueva partida"
@@ -24,9 +25,7 @@ start_menu (){
     read -r -s -n 1 start_option
 
     case $start_option in
-        1) start_option=0
-            # shellcheck disable=SC2034
-            first_time=1
+        1)  first_time=1
             lobby
             ;;
         2)  start_option=0

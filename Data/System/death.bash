@@ -7,7 +7,7 @@ death() {
     echo Pero ninguna muerte es para siempre...
     sleep 1
     first_time=0
-    lobby
+    start_menu
 }
 
 
