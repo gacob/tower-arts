@@ -96,7 +96,7 @@ character_1_turn(){
     echo sed -n 1p skill_dmg
 
     combat=2
-    echo $combat > $( sed -n 1p combat_data )
+    echo $combat > combat_data
 }
 
 
@@ -195,7 +195,5 @@ character_2_turn(){
     echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes. > skill_dmg
     echo sed -n 1p skill_dmg
 
-    combat=1
-    echo $combat > $( sed -n 1p combat_data )
 }
 

@@ -74,12 +74,26 @@ mob_battle(){
                     done
                 fi
 
+                # Turno del Monstruo
+                combat=3
                 mob_turn
+                echo "Es el turno del $mob_name"
+
+                while [[ $combat -eq 3 ]]; do
+                    combat=$( sed -n 1p combat_data )
+                done
             done
         else
             while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
                 
+                # Turno del Monstruo
+                combat=3
                 mob_turn
+                echo "Es el turno del $mob_name"
+
+                while [[ $combat -eq 3 ]]; do
+                    combat=$( sed -n 1p combat_data )
+                done
 
                 # Almacenamos la IP del jugador que ve esto
                 current=$NCAT_REMOTE_ADDR
