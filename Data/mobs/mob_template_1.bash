@@ -31,13 +31,13 @@ mob_template_1() {
 # Skill_N = Daño que haces
 mob_skillset_1() {
     mob_skill_1=$(( (mob_atk_p * 2 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_1="$mob_name usa [Golpe Básico]"
+    mob_skill_text_1=" usa [Golpe Básico]"
     mob_skill_2=$(( (mob_atk_p * 2 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_2="$mob_name usa [Golpe Duro]"
+    mob_skill_text_2=" usa [Golpe Duro]"
     mob_skill_3=$(( (mob_atk_p * 2 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_3="$mob_name usa [Golpe Feo]"
+    mob_skill_text_3=" usa [Golpe Feo]"
     mob_skill_4=$(( (mob_atk_p * 2 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_4="$mob_name usa [Golpe Infernal]"
+    mob_skill_text_4=" usa [Golpe Infernal]"
 
     #after_left_hp=$(( hp - "mob_skill_"$randomized_skill"" ))
 }
