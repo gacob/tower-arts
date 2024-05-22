@@ -34,6 +34,7 @@ if [[ $hardcore -eq 0 || $first_time -eq 1 ]]; then
     sleep 1
     echo Tras esta bienvenida, subes las escaleras mientras te preparas para el combate...
     sleep 5
+    echo Pulsa un botón para continuar...
     read -r $unreal
     clear
     floor=1
@@ -48,6 +49,7 @@ elif [[ $hardcore -eq 0 || $first_time -eq 0 ]]; then
     sleep 1
     echo Tras esta bienvenida, subes las escaleras mientras te preparas para el combate...
     sleep 5
+    echo Pulsa un botón para continuar...
     read -r $unreal
     clear
     floor=1
@@ -58,6 +60,7 @@ else
     echo Supongo que nunca se puede confiar en uno de los vuestros...
     sleep 1
     echo 
+    echo Pulsa un botón para continuar...
     read -r $unreal
     clear
     floor=100
