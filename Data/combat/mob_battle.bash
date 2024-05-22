@@ -10,7 +10,7 @@ mob_battle(){
     echo "Piso $floor"
 
     echo 
-    echo Os encuentráis a un "$mob_name" frente a vosotros.
+    echo Os encontráis a un "$mob_name" frente a vosotros.
     echo 
     sleep 1
     echo 
@@ -42,8 +42,7 @@ mob_battle(){
     echo "$mob_name": "$mob_current_hp" puntos de vida.
     sleep 1
 
-    read -r character_move
-    
+
     if [[ $speed_1 -ge $mob_speed ]]; then
             while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
 
