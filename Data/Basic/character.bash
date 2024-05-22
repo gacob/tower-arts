@@ -9,6 +9,7 @@ choose_character() {
         echo 
         echo ¿Qué personaje deseas utilizar?
         echo Ten en cuenta que el segundo jugador será forzado a usar el personaje que no has elegido.
+        echo 
         sleep 1
         echo 1. Nombre: "$character_name_1"
         echo Descripción: "$character_description_1"
