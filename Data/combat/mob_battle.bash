@@ -42,10 +42,15 @@ mob_battle(){
     echo "$mob_name": "$mob_current_hp" puntos de vida.
     sleep 1
 
+    bug_fix=1
 
     if [[ $speed_1 -ge $mob_speed ]]; then
             while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
 
+                if [[ bug_fix -eq 1 ]]; then
+                    read -r bug_fixed
+                fi
+                
                 # Almacenamos la IP del jugador que ve esto
                 current=$NCAT_REMOTE_ADDR
                 current="${current//./}"
@@ -140,7 +145,7 @@ mob_battle(){
                 sed -n 1p skill_text
                 sed -n 1p skill_dmg
                 sed -n 1p skill_hp
-                
+
             done
         fi
 }
