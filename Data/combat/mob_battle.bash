@@ -7,6 +7,14 @@ mob_battle(){
     mob_template_1
     mob_skillset_1
 
+    echo "Piso $floor"
+
+    echo 
+    echo Os encuentráis a un "$mob_name" frente a vosotros.
+    echo 
+    sleep 1
+    echo 
+    
     if [[ $p_first_character -eq 1 ]]; then
         current_hp_1=$hp_1
 
@@ -26,12 +34,12 @@ mob_battle(){
     current_hp_1=$( sed -n 1p current_hp_1 )
     current_hp_2=$( sed -n 1p current_hp_2 )
 
-    echo "La vida del Jugador 1 es: $current_hp_1"
-    echo "La vida del Jugador 2 es: $current_hp_2"
+    echo "Jugador 1 es: $current_hp_1 puntos de vida."
+    echo "Jugador 2 es: $current_hp_2 puntos de vida."
 
     mob_current_hp=$mob_hp
 
-    echo La vida del monstruo es: "$mob_current_hp"
+    echo "$mob_name": "$mob_current_hp" puntos de vida.
     sleep 1
 
     if [[ $speed_1 -ge $mob_speed ]]; then
