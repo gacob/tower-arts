@@ -17,15 +17,15 @@ character_template_1() {
 character_skillset_1() {
     c_1_skill_1_name="Habilidad 1"
     c_1_skill_1=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
-    c_1_skill_1_text="$character_name usa [Golpe Básico]"
+    c_1_skill_1_text=" usa [Golpe Básico]"
     c_1_skill_2_name="Habilidad 2"
     c_1_skill_2=$(( (atk_p * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
-    c_1_skill_2_text="$character_name usa [Golpe Duro]"
+    c_1_skill_2_text=" usa [Golpe Duro]"
     c_1_skill_3_name="Vacío"
     c_1_skill_3=
-    c_1_skill_3_text="$character_name usa [Golpe Feo]"
+    c_1_skill_3_text=" usa [Golpe Feo]"
     c_1_skill_4_name="Vacío"
     c_1_skill_4=
-    c_1_skill_4_text="$character_name usa [Golpe Celestial]"
+    c_1_skill_4_text=" usa [Golpe Celestial]"
     
 }
