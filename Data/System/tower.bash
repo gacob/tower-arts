@@ -8,6 +8,7 @@ floor_chances=(0-100)
 ### Floor Welcome
 welcome() {
 if [[ $hardcore -eq 0 || $first_time -eq 1 ]]; then 
+    clear
     echo Una presencia celestial aparece ante ti...
     sleep 2
     echo ¡Hola, bienvenido! Soy Miguel. Sí, ese Árcangel Miguel del que tanto has oído hablar.
