@@ -6,6 +6,9 @@ mob_battle(){
     # Cargando monstruos
     random_mob=$(( RANDOM%3 + 1))
 
+    echo $random_mob > random_mob
+    random_mob=$( sed -n 1p random_mob )
+
     case $random_mob in
         1) random_mob=0
             mob_template_1
