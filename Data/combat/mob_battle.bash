@@ -11,29 +11,32 @@ mob_battle(){
 
 
     # Cargando monstruos
-    random_mob=$(( RANDOM%3 + 1))
-
-    echo $random_mob > random_mob
-    random_mob=$( sed -n 1p random_mob )
+    if [[ "$current" -eq "$cliente_ip_1" ]]; then
+        random_mob=$(( RANDOM%3 + 1))
+        echo $random_mob > random_mob
+    else
+        while [[ $random_mob -eq 0 ]]; do
+            random_mob=$( sed -n 1p random_mob )
+        done
+    fi
 
     case $random_mob in
-        1) random_mob=0
-            mob_template_1
+        1)  mob_template_1
             mob_skillset_1
             ;;
-        2) random_mob=0
-            mob_template_2
+        2)  mob_template_2
             mob_skillset_2
             ;;
-        3)  random_mob=0
-            mob_template_3
+        3)  mob_template_3
             mob_skillset_3
             ;;
     esac
-
-    echo "Piso $floor"
-
+    random_mob=0
+    
     echo 
+    echo "Piso $floor"
+    echo 
+
     if [[ $gender -eq 0 ]]; then
         echo Os encontráis a un "$mob_name" frente a vosotros.
     else

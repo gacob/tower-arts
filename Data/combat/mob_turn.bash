@@ -2,8 +2,17 @@
 
 mob_turn(){
 
-    random_skill=$(( RANDOM%4 + 1))
-    random_target=$(( RANDOM%2 + 1 ))
+    if [[ "$current" -eq "$cliente_ip_1" ]]; then
+        random_skill=$(( RANDOM%4 + 1))
+        random_target=$(( RANDOM%2 + 1 ))
+        echo $random_skill > mob_random_skill
+        echo $random_target > mob_random_target
+    else
+        while [[ $random_target -eq 0 ]]; do
+            mob_random_skill=$( sed -n 1p mob_random_skill)
+            random_target=$( sed -n 1p mob_random_target )
+        done
+    fi
 
     mob_attack="mob_skill_text_${random_skill}"
     echo "$mob_name" usa "${!mob_attack}" > skill_text
