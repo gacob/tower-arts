@@ -27,7 +27,7 @@ mob_battle(){
     echo "Piso $floor"
 
     echo 
-    if [[ gender -eq 0 ]]; then
+    if [[ $gender -eq 0 ]]; then
         echo Os encontráis a un "$mob_name" frente a vosotros.
     else
         echo Os encontráis a una "$mob_name" frente a vosotros.
