@@ -3,6 +3,13 @@
 
 mob_battle(){
 
+    bug_fix=1
+    if [[ $bug_fix -eq 1 ]]; then
+        read -r bug_fixed
+    fi
+    bug_fix=0
+
+    
     # Cargando monstruos
     random_mob=$(( RANDOM%3 + 1))
 
