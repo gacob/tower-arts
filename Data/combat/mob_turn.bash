@@ -55,6 +55,7 @@ mob_turn(){
 
     sleep 1
 
+    combat=1
     dead
 
     if [[ $dead -eq 1 ]]; then
