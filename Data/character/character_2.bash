@@ -23,11 +23,30 @@ character_skillset_2() {
     c_2_skill_2=2
     c_2_skill_2_text="usa [Encantamiento Desarmador]. ¡El enemigo no hará daño durante el siguiente turno!"
    
-    c_2_skill_3_name="Vacío"
-    c_2_skill_3=$(( (atk_p_2 * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
-    c_2_skill_3_text="usa [Golpe Feo]"
+    c_2_skill_3_name="Escudo Físico"
+    c_2_skill_3=3
+    c_2_skill_3_text="usa [Escudo Físico]"
 
-    c_2_skill_4_name="Vacío"
-    c_2_skill_4=$(( (atk_p_2 * 2 ) * ( full_percent - mob_def_p ) / "full_percent" ))
-    c_2_skill_4_text="usa [Golpe Celestial]"
+    c_2_skill_4_name="Escudo Mágico"
+    c_2_skill_4=4
+    c_2_skill_4_text="usa [Escudo Mágico]"
+}
+
+shield() {
+
+    echo ¿A qué Jugador quieres aplicarle el Escudo?
+    echo "1. Jugador 1"
+    echo "2. A ti mismo"
+    read -r shield_choice
+
+    case $shield_choice in
+        1) shield_choice=0
+            shield_j1=1
+            shield_j2=0
+            ;;
+        2) shield_choice=0
+            shield_j1=0
+            shield_j2=1
+    esac
+
 }
