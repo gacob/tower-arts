@@ -12,6 +12,18 @@ character_template_1() {
     def_p_1=5
     def_m_1=5
     speed_1=12
+
+    ## Character Escaling
+    escale=$(( level * 1 ))
+
+    hp_1=$(( hp_1 * escale ))
+    atk_p_1=$(( atk_p_1 * escale ))
+    atk_m_1=$(( atk_m_1 * escale ))
+
+    def_p_1=$(( def_p_1 * escale ))
+    def_m_1=$(( def_m_1 * escale ))
+
+    speed_1=$(( speed_1 * escale ))
 }
 
 character_skillset_1() {
