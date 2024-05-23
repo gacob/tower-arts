@@ -2,6 +2,7 @@
 
 lobby (){
     level=1
+    bug_fix=1
     
     # Cargando personajes
     character_template_1
