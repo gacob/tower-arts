@@ -9,7 +9,7 @@ mob_battle(){
     fi
     bug_fix=0
 
-    
+
     # Cargando monstruos
     random_mob=$(( RANDOM%3 + 1))
 
@@ -74,11 +74,6 @@ mob_battle(){
 
     if [[ $speed_1 -ge $mob_speed ]]; then
             while [[ $current_hp_1 -gt 0 && $current_hp_2 -gt 0 && $mob_current_hp -gt 0 ]]; do
-
-                if [[ $bug_fix -eq 1 ]]; then
-                    read -r bug_fixed
-                fi
-                bug_fix=0
 
                 # Almacenamos la IP del jugador que ve esto
                 current=$NCAT_REMOTE_ADDR
