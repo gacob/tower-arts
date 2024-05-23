@@ -32,10 +32,10 @@ mob_template_1() {
 # Skill_N = Daño que haces
 mob_skillset_1() {
     mob_skill_1=$(( (mob_atk_p * 2 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_1=" usa [Golpe Básico]"
+    mob_skill_text_1=" usa [Puño Furioso]"
     
     mob_skill_2=$(( (mob_atk_p * 4 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_2=" usa [Golpe Duro]"
+    mob_skill_text_2=" usa [Rompedor de Cráneos]"
     
     mob_skill_3=$(( mob_atk_p + 5 ))
     mob_skill_text_3=" usa [Rugido]. Su ataque ha subido."
