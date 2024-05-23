@@ -31,15 +31,15 @@ mob_template_3() {
 # Skill_N = Daño que haces
 mob_skillset_3() {
     mob_skill_1=$(( (mob_atk_p * 4 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_1=" usa [Golpe de Cola]"
+    mob_skill_text_1="usa [Golpe de Cola]"
     
     mob_skill_2=$(( (mob_atk_m * 5 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_2=" usa [Hazañas Mitológicas]"
+    mob_skill_text_2="usa [Hazañas Mitológicas]"
     
     mob_skill_3=$(( mob_def_p + 2 && mob_def_m + 2 ))
-    mob_skill_text_3=" usa [Sangre Mutante]. Su defensa ha subido"
+    mob_skill_text_3="usa [Sangre Mutante]. Su defensa ha subido"
     
     mob_skill_4=$(( (mob_atk_p * 4 ) * ( full_percent - def_p ) / "full_percent" ))
-    mob_skill_text_4=" usa [Garras Puntiagudas]"
+    mob_skill_text_4="usa [Garras Puntiagudas]"
 
 }
