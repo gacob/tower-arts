@@ -33,7 +33,7 @@ mob_turn(){
                 echo "$mob_name" ha intentado atacar al "$random_target" pero tiene un Escudo Físico.
             fi
         else
-            echo ¡"$mob_name" "$mob_skill_text_3" ! > skill_dmg
+            echo "¡$mob_name $mob_skill_text_3!" > skill_dmg
             echo "" > skill_text
         fi
     else
