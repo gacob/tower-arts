@@ -100,7 +100,7 @@ character_2_turn(){
 
     myturn_option=0
     while [[ $myturn_option -eq 0 ]]; do
-        if [[ $p_first_character -eq 1 ]]; then
+        if [[ $p_second_character -eq 1 ]]; then
             echo "$c_1_skill_1_name"
             echo "$c_1_skill_2_name"
             echo "$c_1_skill_3_name"

@@ -71,7 +71,8 @@ mob_battle(){
                 if [[ $bug_fix -eq 1 ]]; then
                     read -r bug_fixed
                 fi
-                
+                bug_fix=0
+
                 # Almacenamos la IP del jugador que ve esto
                 current=$NCAT_REMOTE_ADDR
                 current="${current//./}"
