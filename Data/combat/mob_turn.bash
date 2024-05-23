@@ -49,14 +49,14 @@ mob_turn(){
     if [[ $random_target -eq 1 ]]; then
         if [[ $random_skill -ne 3 || $desarmar -ne 2 || ( $random_target -ne 1 && shield_f_1 -ne 1 ) || ( $random_target -ne 2 && shield_f_2 -ne 1 ) ]]; then
             current_hp_1=$(( current_hp_1 - mob_damage ))
-            echo "Al Jugador 1 le quedan $current_hp_1 puntos de vida."
+            echo "Al Narcisista le quedan $current_hp_1 puntos de vida."
         else
             echo 
         fi
     else
         if [[ $random_skill -ne 3 || $desarmar -ne 2 || ( $random_target -ne 1 && shield_f_1 -ne 1 ) || ( $random_target -ne 2 && shield_f_2 -ne 1 ) ]]; then
             current_hp_2=$(( current_hp_2 - mob_damage ))
-            echo "Al Jugador 2 le quedan $current_hp_2 puntos de vida."
+            echo "Al Perfeccionista le quedan $current_hp_2 puntos de vida."
         else
             echo 
         fi            
