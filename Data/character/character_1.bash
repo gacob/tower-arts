@@ -20,12 +20,15 @@ character_skillset_1() {
     c_1_skill_1_name="Detroit Smash [Físico]"
     c_1_skill_1=$(( (atk_p_1 * 3 ) * ( full_percent - mob_def_p ) / "full_percent" ))
     c_1_skill_1_text="usa [Detroit Smash]"
+
     c_1_skill_2_name="Puño Incasdescente [Mágico]"
     c_1_skill_2=$(( (atk_m_1 * 3 ) * ( full_percent - mob_def_p ) / "full_percent" ))
     c_1_skill_2_text="usa [Puño Incasdescente]"
+
     c_1_skill_3_name="Rugido de Titán de Ataque"
     c_1_skill_3=$(( atk_p_1 + 5 ))
     c_1_skill_3_text="usa [Rugido de Titán de Ataque]. ¡Su ataque físico ha subido!"
+    
     c_1_skill_4_name="Rugido de Titán Acorazado"
     c_1_skill_4=$(( atk_p_1 + 2 && def_m_1 + 2 ))
     c_1_skill_4_text="usa [Rugido de Titán Acorazado]. ¡Toda la defensa ha subido!"
