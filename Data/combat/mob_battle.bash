@@ -4,13 +4,27 @@
 mob_battle(){
 
     # Cargando monstruos
-    mob_template_1
-    mob_skillset_1
+    random_mob=$(( RANDOM%2 + 1))
+
+    case $random_mob in
+        1) random_mob=0
+            mob_template_1
+            mob_skillset_1
+            ;;
+        2) random_mob=0
+            mob_template_2
+            mob_skillset_2
+            ;;
+    esac
 
     echo "Piso $floor"
 
     echo 
-    echo Os encontráis a un "$mob_name" frente a vosotros.
+    if [[ gender -eq 0 ]]; then
+        echo Os encontráis a un "$mob_name" frente a vosotros.
+    else
+        echo Os encontráis a una "$mob_name" frente a vosotros.
+    fi
     echo 
     sleep 1
     echo 

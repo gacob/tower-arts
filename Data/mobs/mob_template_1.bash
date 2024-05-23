@@ -5,6 +5,7 @@ full_percent=100
 
 ## Mob Template Variables
 mob_template_1() {
+    gender=0
     mob_name="Orco"
     mob_hp=150
     mob_atk_p=12
@@ -37,7 +38,7 @@ mob_skillset_1() {
     mob_skill_text_2=" usa [Golpe Duro]"
     
     mob_skill_3=$(( mob_atk_p + 5 ))
-    mob_skill_text_3=" usa [Rugido]"
+    mob_skill_text_3=" usa [Rugido]. Su ataque ha subido."
     
     mob_skill_4=$(( (mob_atk_p * 5 ) * ( full_percent - def_p ) / "full_percent" ))
     mob_skill_text_4=" usa [Por la Horda]"
