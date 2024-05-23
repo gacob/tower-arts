@@ -15,16 +15,16 @@ mob_template_1() {
     mob_speed=10
 
     ## Mob Scaling
-    ## escale=$(( level * 1 ))
+    escale=$(( level * 1 ))
 
-    ## mob_hp=$(( mob_hp * escale ))
-    ## mob_atk_p=$(( mob_atk_p * escale ))
-    ## mob_atk_m=$(( mob_atk_m * escale ))
+    mob_hp=$(( mob_hp * escale ))
+    mob_atk_p=$(( mob_atk_p * escale ))
+    mob_atk_m=$(( mob_atk_m * escale ))
 
-    ## mob_def_p=$(( mob_def_p * escale ))
-    ## mob_def_m=$(( mob_def_m * escale ))
+    mob_def_p=$(( mob_def_p * escale ))
+    mob_def_m=$(( mob_def_m * escale ))
 
-    ## mob_speed=$(( mob_speed * escale ))
+    mob_speed=$(( mob_speed * escale ))
 
 }
 
