@@ -90,9 +90,11 @@ lobby (){
         read -r -s -n 1 lobby_option
         echo "$lobby_option" > lobby_option
     else
+        echo 
         echo "El Jugador 1 es el líder del grupo."
         sleep 1
         echo "El líder del grupo tiene que elegir en el menú."
+        echo 
 
         while [[ $lobby_option -eq 0 ]]; do
             lobby_option=$( sed -n 1p lobby_option )
