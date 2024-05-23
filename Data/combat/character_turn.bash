@@ -7,10 +7,10 @@ character_1_turn(){
     myturn_option=0
     while [[ $myturn_option -eq 0 ]]; do
         if [[ $p_first_character -eq 1 ]]; then
-            echo "$c_1_skill_1_name"
-            echo "$c_1_skill_2_name"
-            echo "$c_1_skill_3_name"
-            echo "$c_1_skill_4_name"
+            echo 1. "$c_1_skill_1_name"
+            echo 2. "$c_1_skill_2_name"
+            echo 3. "$c_1_skill_3_name"
+            echo 4. "$c_1_skill_4_name"
 
             character_move=0
             echo "¿Cúal será tu próximo movimiento...?"
@@ -41,10 +41,10 @@ character_1_turn(){
             fi
 
         else
-            echo "$c_2_skill_1_name"
-            echo "$c_2_skill_2_name"
-            echo "$c_2_skill_3_name"
-            echo "$c_2_skill_4_name"
+            echo 1. "$c_2_skill_1_name"
+            echo 2. "$c_2_skill_2_name"
+            echo 3. "$c_2_skill_3_name"
+            echo 4. "$c_2_skill_4_name"
 
             character_move=0
             echo "¿Cúal será tu próximo movimiento...?"
@@ -101,10 +101,10 @@ character_2_turn(){
     myturn_option=0
     while [[ $myturn_option -eq 0 ]]; do
         if [[ $p_second_character -eq 1 ]]; then
-            echo "$c_1_skill_1_name"
-            echo "$c_1_skill_2_name"
-            echo "$c_1_skill_3_name"
-            echo "$c_1_skill_4_name"
+            echo 1. "$c_1_skill_1_name"
+            echo 2. "$c_1_skill_2_name"
+            echo 3. "$c_1_skill_3_name"
+            echo 4. "$c_1_skill_4_name"
 
             character_move=0
             echo "¿Cúal será tu próximo movimiento...?"
@@ -135,10 +135,10 @@ character_2_turn(){
             fi
 
         else
-            echo "$c_2_skill_1_name"
-            echo "$c_2_skill_2_name"
-            echo "$c_2_skill_3_name"
-            echo "$c_2_skill_4_name"
+            echo 1. "$c_2_skill_1_name"
+            echo 2. "$c_2_skill_2_name"
+            echo 3. "$c_2_skill_3_name"
+            echo 4. "$c_2_skill_4_name"
 
             character_move=0
             echo "¿Cúal será tu próximo movimiento...?"

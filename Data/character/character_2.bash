@@ -47,7 +47,7 @@ character_skillset_2() {
 shield() {
 
     echo ¿A qué Jugador quieres aplicarle el Escudo?
-    echo "1. Jugador 1"
+    echo "1. Al otro jugador"
     echo "2. A ti mismo"
     read -r shield_choice
 
