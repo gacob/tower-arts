@@ -24,7 +24,7 @@ mob_turn(){
         mob_damage="mob_skill_${random_skill}"
 
         # Su tercer ataque es un Buff: Rugido
-        if [[ $mob_damage -ne 3 ]]; then
+        if [[ $random_skill -ne 3 ]]; then
             if [[ ( $random_target -ne 1 && shield_f_1 -ne 1 ) || ( $random_target -ne 2 && shield_f_2 -ne 1 )]]; then
                 echo ¡"$mob_name" ha hecho "${!mob_damage}" puntos de daño! > skill_dmg
             
@@ -32,7 +32,7 @@ mob_turn(){
                 echo "$mob_name" ha intentado atacar al "$random_target" pero tiene un Escudo Físico.
             fi
         else
-            echo ¡"$mob_name" se ha subido el ataque físico! > skill_dmg
+            echo ¡"$mob_name" "$mob_skill_text_3" ! > skill_dmg
         fi
     else
         echo ¡"$mob_name" no ha podido atacar porque ha sido desarmado! > skill_dmg
