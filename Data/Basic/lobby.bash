@@ -7,6 +7,8 @@ lobby (){
     character_template_2
     character_skillset_2
 
+    check_exp
+    
     # Asignación de IP al entrar al servidor
     case $count in
     1)  cliente_ip_1=$NCAT_REMOTE_ADDR
