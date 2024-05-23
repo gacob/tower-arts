@@ -41,12 +41,18 @@ shield() {
 
     case $shield_choice in
         1) shield_choice=0
-            shield_j1=1
-            shield_j2=0
+            if [[ $f_shield -eq 1 ]]; then
+                shield_f_j1=1
+            else
+                shield_m_j1=1
+            fi
             ;;
         2) shield_choice=0
-            shield_j1=0
-            shield_j2=1
+            if [[ $f_shield -eq 1 ]]; then
+                shield_f_j2=1
+            else
+                shield_m_j2=1
+            fi
     esac
 
 }

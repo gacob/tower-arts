@@ -59,6 +59,7 @@ character_1_turn(){
 
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 1 $c_2_skill_2_text" > skill_text
+                desarmar=2
                 break 2
             fi
 
@@ -149,6 +150,7 @@ character_2_turn(){
 
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 2 $c_2_skill_2_text" > skill_text
+                desarmar=2
                 break 2
             fi
 
