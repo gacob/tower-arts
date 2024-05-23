@@ -10,22 +10,26 @@ lobby (){
     character_template_2
     character_skillset_2
 
+    echo 
+    sleep 1
+
     # Asignación de IP al entrar al servidor
     case $count in
     1)  cliente_ip_1=$NCAT_REMOTE_ADDR
         cliente_ip_1="${cliente_ip_1//./}"
-        echo Esta es tu IP: "$cliente_ip_1"
         count=$(( count + 1 ))
         ;;
     2) cliente_ip_2=$NCAT_REMOTE_ADDR
         cliente_ip_2="${cliente_ip_2//./}"
-        echo Esta es tu IP: "$cliente_ip_2"
         count=$(( count + 1 ))
    esac
 
+    echo 
+    sleep 1
+
     # Wait Room
     echo Esperando a los dos jugadores...
-
+    echo 
     # Almacenamos las IP
     echo "$cliente_ip_1" >> list_ip
     cliente_ip_1=$( sed -n 1p list_ip )
@@ -35,8 +39,8 @@ lobby (){
         cliente_ip_2=$( sed -n 2p list_ip )
     done
 
-    echo "ip 1" "$cliente_ip_1"
-    echo "ip 2" "$cliente_ip_2"
+    echo 
+    sleep 1
 
     # Asignación de Personaje
     current=$NCAT_REMOTE_ADDR
@@ -51,12 +55,15 @@ lobby (){
         echo $choosing > character_choice
     else
         echo "Jugador 1 está eligiendo personaje."
-
+        echo
+        
         while [[ $choosing -eq 1 ]]; do
             p_first_character=$( sed -n 1p character_first_player )
             choosing=$( sed -n 1p character_choice )
         done
-
+        echo 
+        sleep 1
+        
         rm character_choice
 
         sleep 1
@@ -77,9 +84,14 @@ lobby (){
         fi
     fi
 
+    echo 
     sleep 1
+    echo
 
     p_second_character=$( sed -n 1p character_second_player )
+    echo 
+    echo  
+    sleep 1
 
     info_character
     echo "1. Entrar en la torre"
