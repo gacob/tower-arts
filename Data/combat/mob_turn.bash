@@ -3,7 +3,7 @@
 mob_turn(){
 
     random_skill=$(( RANDOM%4 + 1))
-    random_target=$(RANDOM%2 + 1)
+    random_target=$(( RANDOM%2 + 1 ))
 
     mob_attack="mob_skill_text_${random_skill}"
     echo "$mob_name" usa "${!mob_attack}" > skill_text
@@ -44,7 +44,7 @@ mob_turn(){
     fi
 
     sleep 3
-    
+
     dead
 
     if [[ $dead -eq 1 ]]; then
