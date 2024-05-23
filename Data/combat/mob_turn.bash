@@ -30,7 +30,7 @@ mob_turn(){
                 echo ¡"$mob_name" ha hecho "${!mob_damage}" puntos de daño! > skill_dmg
             
             else
-                echo "$mob_name" ha intentado atacar al "$random_target" pero tiene un Escudo Físico.
+                echo "$mob_name" ha intentado atacar al "$random_target" pero tiene un Escudo.
             fi
         else
             echo "¡$mob_name $mob_skill_text_3!" > skill_dmg
@@ -47,11 +47,19 @@ mob_turn(){
     sleep 1
 
     if [[ $random_target -eq 1 ]]; then
-        current_hp_1=$(( current_hp_1 - mob_damage ))
-        echo "Al Jugador 1 le quedan $current_hp_1 puntos de vida."
+        if [[ $random_skill -ne 3 ]]; then
+            current_hp_1=$(( current_hp_1 - mob_damage ))
+            echo "Al Jugador 1 le quedan $current_hp_1 puntos de vida."
+        else
+            echo 
+        fi
     else
-        current_hp_2=$(( current_hp_2 - mob_damage ))
-        echo "Al Jugador 2 le quedan $current_hp_2 puntos de vida."
+        if [[ $random_skill -ne 3 ]]; then
+            current_hp_2=$(( current_hp_2 - mob_damage ))
+            echo "Al Jugador 2 le quedan $current_hp_2 puntos de vida."
+        else
+            echo 
+        fi            
     fi
 
     sleep 1
