@@ -11,6 +11,6 @@ check_exp() {
         exp_base=$exp_needed
         exp_needed=$(( exp_base * 2 ))
         level=$(( level + 1))
-        echo "¡Has subido de nivel $level!"
+        echo "¡Has acumulado tantas Monedas del Vicio que ahora te sientes más fuerte!"
     done
 }
