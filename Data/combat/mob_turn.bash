@@ -8,7 +8,7 @@ mob_turn(){
     mob_attack="mob_skill_text_${random_skill}"
     echo "$mob_name" usa "${!mob_attack}" > skill_text
 
-    sleep 3
+    sleep 1
 
     # Ataca si no está desarmado
     if [[ $desarmar -ne 2 ]]; then
@@ -33,7 +33,7 @@ mob_turn(){
     sed -n 1p skill_text
     sed -n 1p skill_dmg
 
-    sleep 3
+    sleep 1
 
     if [[ $random_target -eq 1 ]]; then
         current_hp_1=$(( current_hp_1 - mob_damage ))
@@ -43,7 +43,7 @@ mob_turn(){
         echo "Al Jugador 2 le quedan $current_hp_2 puntos de vida."
     fi
 
-    sleep 3
+    sleep 1
 
     dead
 

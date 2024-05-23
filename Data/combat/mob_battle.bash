@@ -22,7 +22,6 @@ mob_battle(){
             mob_template_3
             mob_skillset_3
             ;;
-
     esac
 
     echo "Piso $floor"
