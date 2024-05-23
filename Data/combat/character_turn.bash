@@ -32,11 +32,13 @@ character_1_turn(){
 
             if [[ $character_move -eq 3 ]]; then
             echo "El Jugador 1 $c_1_skill_3_text" > skill_text
+            echo "" > skill_dmg
                 break 2
             fi
             
             if [[ $character_move -eq 4 ]]; then
             echo "El Jugador 1 $c_1_skill_4_text" > skill_text
+            echo "" > skill_dmg
                 break 2
             fi
 
@@ -59,12 +61,14 @@ character_1_turn(){
 
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 1 $c_2_skill_2_text" > skill_text
+                echo "" > skill_dmg
                 desarmar=2
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then 
                 echo "El Jugador 1 $c_2_skill_3_text" > skill_text
+                echo "" > skill_dmg
                 f_shield=1
                 shield
                 break 2
@@ -72,6 +76,7 @@ character_1_turn(){
 
             if [[ $character_move -eq 4 ]]; then
                 echo "El Jugador 1 $c_2_skill_4_text" > skill_text
+                echo "" > skill_dmg
                 m_shield=1
                 shield
                 break 2
@@ -126,11 +131,13 @@ character_2_turn(){
 
             if [[ $character_move -eq 3 ]]; then
                 echo "El Jugador 2 $c_1_skill_3_text" > skill_text
+                echo "" > skill_dmg
                 break 2
             fi
 
             if [[ $character_move -eq 4 ]]; then
                 echo "El Jugador 2 $c_1_skill_4_text" > skill_text
+                echo "" > skill_dmg
                 break 2
             fi
 
@@ -153,12 +160,14 @@ character_2_turn(){
 
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 2 $c_2_skill_2_text" > skill_text
+                echo "" > skill_dmg
                 desarmar=2
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then
                 echo "El Jugador 2 $c_2_skill_3_text" > skill_text
+                echo "" > skill_dmg
                 f_shield=1
                 shield
                 break 2
@@ -166,6 +175,7 @@ character_2_turn(){
 
             if [[ $character_move -eq 4 ]]; then
                 echo "El Jugador 2 $c_2_skill_4_text" > skill_text
+                echo "" > skill_dmg
                 m_shield=1
                 shield
                 break 2

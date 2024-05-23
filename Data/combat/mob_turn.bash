@@ -34,6 +34,7 @@ mob_turn(){
             fi
         else
             echo ¡"$mob_name" "$mob_skill_text_3" ! > skill_dmg
+            echo "" > skill_text
         fi
     else
         echo ¡"$mob_name" no ha podido atacar porque ha sido desarmado! > skill_dmg
