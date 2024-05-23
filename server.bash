@@ -3,7 +3,7 @@
 # Iniciar el servidor
 start_server() {
 
-    # Crear un socket en el puerto 12345
+    # Crear un socket en el puerto 8080
     rm list_ip
     rm character_choice
     rm character_first_player
