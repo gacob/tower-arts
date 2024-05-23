@@ -36,7 +36,7 @@ mob_skillset_1() {
     mob_skill_2=$(( (mob_atk_p * 4 ) * ( full_percent - def_p ) / "full_percent" ))
     mob_skill_text_2=" usa [Golpe Duro]"
     
-    mob_skill_3=$(( mob_atk_p + 5  ))
+    mob_skill_3=$(( mob_atk_p + 5 ))
     mob_skill_text_3=" usa [Rugido]"
     
     mob_skill_4=$(( (mob_atk_p * 5 ) * ( full_percent - def_p ) / "full_percent" ))
