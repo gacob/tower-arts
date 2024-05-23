@@ -84,6 +84,20 @@ mob_battle(){
                 combat=1
                 echo $combat > combat_data
 
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
+
                 # Turno del Jugador 1
                 if [[ $current -eq $cliente_ip_1 ]]; then
                     character_1_turn
@@ -94,9 +108,26 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+
+
                 sed -n 1p skill_text
                 sed -n 1p skill_dmg
                 sed -n 1p skill_hp
+
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
+
 
                 # Turno del Jugador 2
                 if [[ $current -eq $cliente_ip_2 ]]; then
@@ -108,9 +139,26 @@ mob_battle(){
                         combat=$( sed -n 1p combat_data )
                     done
                 fi
+
+
                 sed -n 1p skill_text
                 sed -n 1p skill_dmg
                 sed -n 1p skill_hp
+
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
+
 
                 # Turno del Monstruo
                 combat=3
@@ -142,6 +190,21 @@ mob_battle(){
                 touch combat_data
                 echo $combat > combat_data
 
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
+
+
                 # Turno del Jugador 1
                 if [[ $current -eq $cliente_ip_1 ]]; then
                     character_1_turn
@@ -157,6 +220,21 @@ mob_battle(){
                 sed -n 1p skill_dmg
                 sed -n 1p skill_hp
                 
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
+
+
                 # Turno del Jugador 2
                 if [[ $current -eq $cliente_ip_2 ]]; then
                     character_2_turn
@@ -171,6 +249,20 @@ mob_battle(){
                 sed -n 1p skill_text
                 sed -n 1p skill_dmg
                 sed -n 1p skill_hp
+
+                echo $current_hp_1 > current_hp_1
+                echo $current_hp_2 > current_hp_2
+
+                current_hp_1=$( sed -n 1p current_hp_1 )
+                current_hp_2=$( sed -n 1p current_hp_2 )
+
+                echo "Jugador 1 es: $current_hp_1 puntos de vida."
+                echo "Jugador 2 es: $current_hp_2 puntos de vida."
+
+                mob_current_hp=$mob_hp
+
+                echo "$mob_name": "$mob_current_hp" puntos de vida.
+                sleep 1
 
             done
         fi

@@ -19,6 +19,7 @@ start_server() {
     rm random_mob
     rm mob_random_skill
     rm mob_random_target
+    rm buff
 
     touch list_ip
     touch character_choice
@@ -35,6 +36,7 @@ start_server() {
     touch random_mob
     touch mob_random_skill
     touch mob_random_target
+    touch buff
 
     export count=1
     export choosing=1
