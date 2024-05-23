@@ -180,6 +180,8 @@ character_2_turn(){
 
     echo Al enemigo le quedan "$mob_current_hp" puntos de vida restantes. > skill_hp
 
+    combat=3
+    echo $combat > combat_data
     sleep 1
 }
 
