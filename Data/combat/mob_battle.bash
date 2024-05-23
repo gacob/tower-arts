@@ -4,7 +4,7 @@
 mob_battle(){
 
     # Cargando monstruos
-    random_mob=$(( RANDOM%2 + 1))
+    random_mob=$(( RANDOM%3 + 1))
 
     case $random_mob in
         1) random_mob=0
@@ -15,6 +15,11 @@ mob_battle(){
             mob_template_2
             mob_skillset_2
             ;;
+        3)  random_mob=0
+            mob_template_3
+            mob_skillset_3
+            ;;
+
     esac
 
     echo "Piso $floor"
