@@ -62,14 +62,14 @@ character_1_turn(){
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 1 $c_2_skill_2_text" > skill_text
                 echo "" > skill_dmg
-                desarmar=2
+                desarmar=2 > buff
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then 
                 echo "El Jugador 1 $c_2_skill_3_text" > skill_text
                 echo "" > skill_dmg
-                f_shield=1
+                f_shield=1 > buff
                 shield
                 break 2
             fi
@@ -77,7 +77,7 @@ character_1_turn(){
             if [[ $character_move -eq 4 ]]; then
                 echo "El Jugador 1 $c_2_skill_4_text" > skill_text
                 echo "" > skill_dmg
-                m_shield=1
+                m_shield=1 > buff
                 shield
                 break 2
             fi
@@ -86,6 +86,10 @@ character_1_turn(){
     done
 
     sleep 1
+
+    desarmar=$( sed -n 1p buff )
+    p_shield=$( sed -n 1p buff )
+    m_shield=$( sed -n 1p buff )
 
     echo "$mob_current_hp" >> mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
@@ -161,14 +165,14 @@ character_2_turn(){
             if [[ $character_move -eq 2 ]]; then
                 echo "El Jugador 2 $c_2_skill_2_text" > skill_text
                 echo "" > skill_dmg
-                desarmar=2
+                desarmar=2 > buff
                 break 2
             fi
 
             if [[ $character_move -eq 3 ]]; then
                 echo "El Jugador 2 $c_2_skill_3_text" > skill_text
                 echo "" > skill_dmg
-                f_shield=1
+                f_shield=1 > buff
                 shield
                 break 2
             fi
@@ -176,7 +180,7 @@ character_2_turn(){
             if [[ $character_move -eq 4 ]]; then
                 echo "El Jugador 2 $c_2_skill_4_text" > skill_text
                 echo "" > skill_dmg
-                m_shield=1
+                m_shield=1 > buff
                 shield
                 break 2
             fi
@@ -184,6 +188,10 @@ character_2_turn(){
     done
 
     sleep 1
+
+    desarmar=$( sed -n 1p buff )
+    p_shield=$( sed -n 1p buff )
+    m_shield=$( sed -n 1p buff )
 
     echo "$mob_current_hp" > mob_hp
     mob_current_hp=$( sed -n 1p mob_hp )
