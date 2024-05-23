@@ -2,7 +2,14 @@
 
 set -e
 
+cd home
+
 apt update
+apt install git
+git clone https://github.com/gacob/tower-arts.git
+
+cd tower-arts
+
 apt install -y dos2unix
 apt install -y sudo
 apt install -y iptables
