@@ -28,13 +28,13 @@ hamachi set-nick proyectodocker
 
 sleep 1
 
-hamachi create dolordemuelas3030 juiciofinal
+hamachi create dolordemuelas4040 juiciofinal
 
 sleep 1
 
 hamachi
 
-sleep 2
+sleep 5
 
 ifconfig
 
