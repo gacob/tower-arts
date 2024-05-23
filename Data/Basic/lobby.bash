@@ -4,6 +4,8 @@ lobby (){
     level=1
     bug_fix=1
     
+    clear
+    
     # Cargando personajes
     character_template_1
     character_skillset_1
