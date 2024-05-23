@@ -7,8 +7,12 @@ mob_turn(){
     mob_attack="mob_skill_text_${random_skill}"
     echo "$mob_name" usa "${!mob_attack}" > skill_text
 
-    mob_damage="mob_skill_${random_skill}"
-    echo ¡"$mob_name" ha hecho "${!mob_damage}" puntos de daño! > skill_dmg
+    if [[ $c_2_skill_2 -eq 2 ]]; then
+        mob_damage="mob_skill_${random_skill}"
+        echo ¡"$mob_name" ha hecho "${!mob_damage}" puntos de daño! > skill_dmg
+    else
+        echo ¡"$mob_name" no ha podido atacar porque ha sido desarmado! > skill_dmg
+    fi
 
     random_target=$(RANDOM%2 + 1)
 
