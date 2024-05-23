@@ -69,11 +69,7 @@ fi
 
 ### Floor Randomizer
 floor_random() { # shellcheck disable=SC2309
-if [[ "$floor"%10 -eq 0 ]]; then
-    boss_fight
-else
-    mob_battle
-fi
+mob_battle
 }
 
 
