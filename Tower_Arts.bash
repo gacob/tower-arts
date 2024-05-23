@@ -10,6 +10,8 @@ source data/basic/character.bash
 source data/character/character_1.bash
 source data/character/character_2.bash
 source data/mobs/mob_template_1.bash
+source data/mobs/mob_template_2.bash
+source data/mobs/mob_template_3.bash
 source data/combat/character_turn.bash
 source data/combat/mob_turn.bash
 source data/combat/mob_battle.bash
